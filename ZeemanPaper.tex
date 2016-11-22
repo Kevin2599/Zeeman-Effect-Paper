@@ -30,35 +30,61 @@
 	\subsection{Historical Background}
 
 	\subsection{Theoretical Overview} \label{sec:Theory}
+		The splitting of the spectra of mercury into hyperfine lines when an external magnetic field is applied is the result of the mercury atom's magnetic-dipole interaction with the external magnetic field.
+		 
 		In its ground state, the mercury atom has 80 electrons in which the n = 1, 2, 3, 4, and 5 shells are filled, leaving two 6s valence electrons.
 		The spectral emissions of mercury come from the transitions of the two valence electrons between different quantum states.
 		
-		The total angular momentum $J$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $L$, and the spin angular momentum quantum number $S$.
+		When no external magnetic field is present, hyperfine structure in atomic spectra can be observed due to the spin-angular momentum coupling of electrons. 
+		See pp. 47 of \cite{melissinos_experiments_1966} for a more detailed discussion.
+		In the presence of an external magnetic field, the interaction of the total angular momentum of the electrons with the magnetic field also splits the spectral lines into finer lines of slightly different wavelength.
+		Figure \ref{fig:SpectralSplitting} shows how a single transition from the $l=2$ to $l=1$ states results in hyperfine structure in the presence of a magnetic field.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.0\linewidth]{Images/SpectralSplitting}
+			\caption{A single spectral line caused by an atomic energy transition will be split into multiple ``hyperfine" lines due to the interaction of the total angular momentum of the valence electrons with an external magnetic field. (a) shows the transition in the absence of an external magnetic field. The transition between the $l=2$ and the $l=1$ states ($d\rightarrow p$) produces a single spectral line. (b) shows how these formerly single energy-levels are split into multiple states in the presence of an external magnetic field. (c) shows the possible transitions between the new states, each of which produces a different spectral line with slightly different wavelength.}
+			\label{fig:SpectralSplitting}
+		\end{figure}
+
+		The total angular momentum $J$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $l$, and the spin angular momentum quantum number $s$.
 		In Russell-Saunders or LS coupling, the total angular momentum is given by the sum of the orbital angular momentum and the spin angular momentum:
 		
 		\begin{equation}
-			J = L + S
+			j = l + s
 			\label{eq:TotalAngularP}
 		\end{equation}
+		Figure \ref{fig:TotalAngularMomentumDiagram} shows how these two quantities (vectors, actually) combine to form total angular momentum.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=1.0\linewidth]{Images/TotalAngularMomentumDiagram}
+			\caption{Electron spin angular momentum $\mathbf{s}$ and orbital angular momentum $\mathbf{l}$ sum to create total angular momentum $\mathbf{j}$.}
+			\label{fig:TotalAngularMomentumDiagram}
+		\end{figure}
+
 		
 		Selection rules place restrictions on how the quantum numbers may change when a valence electron undergoes a transitions.
 		These selection rules are:
 		\begin{enumerate}
-			\item $\Delta S = 0$
-			\item $\Delta L = 0, \pm1$
+			\item $\Delta s = 0$
+			\item $\Delta l = 0, \pm1$
 			\item $\Delta J = 0, \pm1$, but not $\Delta J = 0 \rightarrow \Delta J = 0$
 			\item $\Delta M_j = 0, \pm1$, but not $M_j=0\rightarrow M_j=0$ if $\Delta J = 0$
 		\end{enumerate}
 		
+		Figure \ref{fig:SpectralSplitting} shows that spectral splitting is dependent on the quantum number $m$, which specifies the projection of the orbital angular momentum along the z-axis of the atom.
+		$m$ can take on $2l+1$ the values ranging from $l$ to $-l$.
+		
 		The resulting polarization of the light emitted in a transition is entirely determined by $\Delta M_j$.
 		For $\Delta M_j = 0$, the emitted photons are polarized linearly and parallel to the field lines of the applied magnetic field $\mathbf{B}$.
 		For $\Delta M_j=\pm1$, emitted photons are circularly polarized along the direction of $\mathbf{B}$ and appear linearly polarized perpendicular to $\mathbf{B}$ when viewed side-on to $\mathbf{B}$.
-		\begin{figure*}
+		\begin{figure}
 			\centering
-			\includegraphics[width=1.0\textwidth]{Images/MercuryEnergyLevelsdiagram.png}
-			\caption{Energy level transitions of mercury between quantum states. For the purposes of our observations, we are interested in the $7^3S_1 \rightarrow 6^3P_2$ transition which produces 546.1 nm light.}
+			\includegraphics[width=0.5\textwidth]{Images/MercuryEnergyLevelsDiagram.png}
+			\caption{Energy level transitions of mercury between quantum states. For the purposes of our observations, we are interested in the $7^3S_1 \rightarrow 6^3P_2$ transition which produces 546.1 nm light. Figure 7.39 of \cite{melissinos_experiments_1966}}
 			\label{fig:MercuryEnergyLevelsDiagram}
-		\end{figure*}
+		\end{figure}
 
 		
 \section{Methods and Procedures}
@@ -245,5 +271,8 @@
 	
 
 \section{Conclusion} \label{sec:Conclusion}
+
+\bibliographystyle{ieeetr}
+\bibliography{ZeemanPaper}
 
 \end{document}
