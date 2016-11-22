@@ -12,8 +12,11 @@
 \captionsetup[figure]{labelfont=bf}
 
 %opening
-\title{Measuring the Zeeman Effect}
-\author{}
+\title{Laboratory Observations of the Zeeman Effect}
+\author{Jack Nelson,\\
+	Physics Department,\\
+	Occidental College, Los Angeles, CA}
+\date{November 2016}
 
 \begin{document}
 
@@ -26,7 +29,37 @@
 \section{Introduction} \label{sec:Intro}
 	\subsection{Historical Background}
 
-	\subsection{Theory of the Zeeman Effect} \label{sec:Theory}
+	\subsection{Theoretical Overview} \label{sec:Theory}
+		In its ground state, the mercury atom has 80 electrons in which the n = 1, 2, 3, 4, and 5 shells are filled, leaving two 6s valence electrons.
+		The spectral emissions of mercury come from the transitions of the two valence electrons between different quantum states.
+		
+		The total angular momentum $J$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $L$, and the spin angular momentum quantum number $S$.
+		In Russell-Saunders or LS coupling, the total angular momentum is given by the sum of the orbital angular momentum and the spin angular momentum:
+		
+		\begin{equation}
+			J = L + S
+			\label{eq:TotalAngularP}
+		\end{equation}
+		
+		Selection rules place restrictions on how the quantum numbers may change when a valence electron undergoes a transitions.
+		These selection rules are:
+		\begin{enumerate}
+			\item $\Delta S = 0$
+			\item $\Delta L = 0, \pm1$
+			\item $\Delta J = 0, \pm1$, but not $\Delta J = 0 \rightarrow \Delta J = 0$
+			\item $\Delta M_j = 0, \pm1$, but not $M_j=0\rightarrow M_j=0$ if $\Delta J = 0$
+		\end{enumerate}
+		
+		The resulting polarization of the light emitted in a transition is entirely determined by $\Delta M_j$.
+		For $\Delta M_j = 0$, the emitted photons are polarized linearly and parallel to the field lines of the applied magnetic field $\mathbf{B}$.
+		For $\Delta M_j=\pm1$, emitted photons are circularly polarized along the direction of $\mathbf{B}$ and appear linearly polarized perpendicular to $\mathbf{B}$ when viewed side-on to $\mathbf{B}$.
+		\begin{figure*}
+			\centering
+			\includegraphics[width=1.0\textwidth]{Images/MercuryEnergyLevelsdiagram.png}
+			\caption{Energy level transitions of mercury between quantum states. For the purposes of our observations, we are interested in the $7^3S_1 \rightarrow 6^3P_2$ transition which produces 546.1 nm light.}
+			\label{fig:MercuryEnergyLevelsDiagram}
+		\end{figure*}
+
 		
 \section{Methods and Procedures}
 	The Pasco Scientific Model SE-9654 Zeeman Effect Experiment was used to make all observations.
@@ -100,7 +133,7 @@
 			\caption{\textbf{Axial field configuration.}}
 			\label{subfig:AxialFieldConfig}
 		\end{subfigure}%
-		\caption{\textbf{The two magnetic field configurations observed. In (\ref{subfig:PerpFieldConfig}), the magnetic field is oriented perpendicularly to the path of the observed light from the mercury lamp. $\mathbf{90\deg}$ polarization is defined to be perpendicular to the field lines, while $\mathbf{0\deg}$ polarization is parallel to the field lines. In configuration (\ref{subfig:AxialFieldConfig}), light from the lamp travels along the magnetic field lines down the center of one of the solenoids through a sight hole.}}
+		\caption{\textbf{The two magnetic field configurations observed. In (\ref{subfig:PerpFieldConfig}), the magnetic field is oriented perpendicularly to the path of the observed light from the mercury lamp. $\mathbf{90\degree}$ polarization is defined to be perpendicular to the field lines, while $\mathbf{0\degree}$ polarization is parallel to the field lines. In configuration (\ref{subfig:AxialFieldConfig}), light from the lamp travels along the magnetic field lines down the center of one of the solenoids through a sight hole.}}
 		\label{fig:FieldConfig}
 	\end{figure*}
 	
@@ -108,6 +141,15 @@
 	
 \section{Data and Results} \label{sec:DataAndResults}
 	 
+	 With no applied magnetic field, the 546.1nm mercury spectral line as viewed through the Fabry-Perot interferometer produces the interference pattern as shown in Figure \ref{fig:B=0Pattern}.
+	 
+	 \begin{figure}
+		\centering
+		\includegraphics[width=0.5\textwidth]{Images/B=0Pattern}
+		\caption{Interference pattern of the 546.1nm mercury line with no applied magnetic field. The interference lines are singular.}
+		\label{fig:B=0Pattern}
+	\end{figure}
+ 
 	 \begin{table}[h]
 	 	\centering
 	 	\begin{tabular}{l|l}
@@ -122,7 +164,22 @@
 	 	
 	 \end{table}
 	\subsection{Spectra Through a Perpendicular Magnetic Field}
+		The first observations were made such that the mercury lamp was viewed through a magnetic field perpendicular to the travel of the mercury spectra, as is shown in \ref{subfig:PerpFieldConfig}.
+		With this magnetic field configuration, observations were made with the polarizer at $0\degree$ (Parallel to the field lines), and $90\degree$ (perpendicular to the field lines).
+		This allowed us to observe the hyperfine spectral lines with polarization parallel and perpendicular to the magnetic field lines, which correspond to photons created in $\Delta M_z = 0$ and $\Delta M_Z = \pm1$ transitions, respectively, of the mercury electrons.
 		\subsubsection{Spectra with Field-Perpendicular Polarization}
+			
+			With the polarizer set to $90\degree$, we observed the mercury spectra with polarization perpendicular to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
+			
+			\begin{figure}
+				\centering
+				\includegraphics[width=0.5\textwidth]{Images/Triplet90deg}
+				\caption{Interference pattern of the mercury spectrum with a ~1T applied magnetic through a polarizer oriented perpendicular to the magnetic field lines. The interference rings correspond to light produced by $\Delta M_z = 0$ transitions polarized perpendicularly to the magnetic field.}
+				\label{fig:Triplet90deg}
+			\end{figure}
+			
+			Using PASCO Software, The radii of the inner and outer rings of the $k=1$ through $k=4$ interference rings were measured.
+			These radii are given in Table \ref{tab:RadiusMeasurements}.
 			
 			\begin{table*}[]
 				\centering
@@ -155,11 +212,18 @@
 				
 				
 				\caption{\textbf{Radius measurements of the hyperfine structure of the k=1 through k=4 interference rings with a 1T magnetic field and $\mathbf{90\degree}$ polarization.}}
-				\label{my-label}
+				\label{tab:RadiusMeasurements}
 			\end{table*}
 			
 		\subsubsection{Spectra with Field-Parallel Polarization}
-	
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.5\textwidth]{Images/Run2_0Deg}
+			\caption{}
+			\label{fig:Run2_0Deg}
+		\end{figure}
+
+		
 	\subsection{Spectra Along an Axial Magnetic Field}
 	
 	\subsection{Measurement of the Bohr Magneton} \label{subsec:BohrMagneton}
