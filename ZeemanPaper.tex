@@ -33,7 +33,9 @@
 		The splitting of the spectra of mercury into hyperfine lines when an external magnetic field is applied is the result of the mercury atom's magnetic-dipole interaction with the external magnetic field.
 		 
 		In its ground state, the mercury atom has 80 electrons in which the n = 1, 2, 3, 4, and 5 shells are filled, leaving two 6s valence electrons.
-		The spectral emissions of mercury come from the transitions of the two valence electrons between different quantum states.
+		The spectral emissions of mercury come from the transitions of these two valence electrons between different quantum states.
+		Figure \ref{fig:MercuryEnergyLevelsDiagram} shows the different possible transitions of the mercury atom.
+		Our observations will be limited to the $7^3S_1 \rightarrow 6^3P_2$ transition which yields the 546.1 nm green spectral line.
 		
 		When no external magnetic field is present, hyperfine structure in atomic spectra can be observed due to the spin-angular momentum coupling of electrons. 
 		See pp. 47 of \cite{melissinos_experiments_1966} for a more detailed discussion.
@@ -46,8 +48,38 @@
 			\caption{A single spectral line caused by an atomic energy transition will be split into multiple ``hyperfine" lines due to the interaction of the total angular momentum of the valence electrons with an external magnetic field. (a) shows the transition in the absence of an external magnetic field. The transition between the $l=2$ and the $l=1$ states ($d\rightarrow p$) produces a single spectral line. (b) shows how these formerly single energy-levels are split into multiple states in the presence of an external magnetic field. (c) shows the possible transitions between the new states, each of which produces a different spectral line with slightly different wavelength.}
 			\label{fig:SpectralSplitting}
 		\end{figure}
-
-		The total angular momentum $J$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $l$, and the spin angular momentum quantum number $s$.
+		
+		The following discussion is a summary of that in chapter 2 of \cite{melissinos_experiments_1966} on the Zeeman Effect.
+		For a more detailed discussion of the derivation and consequences, consult that reference.
+		
+		Hyperfine splitting in the presence of a magnetic field is due to the interactions of the valence electrons with the magnetic field.
+		These interactions result in an added energy $\Delta E$ per electron given by
+		\begin{equation}
+			\Delta E = m\mu_0H
+		\end{equation}
+		where $m$ is the mass of the electron, $\mu_0$ is the Bohr Magneton, fundamental magnetic moment of the electron, and $H$ is the applied magnetic field.
+		
+		The Bohr Magneton arises from modeling the electron classically as a current loop with current density
+		\begin{equation}
+			\mathbf{J(x)} = -e\mathbf{v} \delta\left(\mathbf{x} - \mathbf{r}\right)
+		\end{equation}
+		Where $\mathbf{r}$ is the orbit equation and $\mathbf{x}$ is the electron position.
+		
+		This current density results in a magnetic dipole moment given by
+		\begin{equation}
+			\mathbf{u} = \frac{1}{2c}\int \mathbf{x} \times \mathbf{J(x)} d^3x = -\frac{1}{2c}e\left(\mathbf{r \times v}\right)
+		\end{equation}
+		The angular momentum of the orbit is given by
+		\begin{equation}
+			\mathbf{L} = \mathbf{r \times p} = m_e\left(\mathbf{r \times v}\right)
+		\end{equation}
+		
+		The quantized angular momentum of the electron is given by 
+		\begin{equation}
+			\mathbf{L} = \frac{lh}{2\pi}
+		\end{equation}
+		
+		The total angular momentum $j$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $l$, and the spin angular momentum quantum number $s$.
 		In Russell-Saunders or LS coupling, the total angular momentum is given by the sum of the orbital angular momentum and the spin angular momentum:
 		
 		\begin{equation}
@@ -58,7 +90,7 @@
 		
 		\begin{figure}
 			\centering
-			\includegraphics[width=1.0\linewidth]{Images/TotalAngularMomentumDiagram}
+			\includegraphics[width=0.90\linewidth]{Images/TotalAngularMomentumDiagram}
 			\caption{Electron spin angular momentum $\mathbf{s}$ and orbital angular momentum $\mathbf{l}$ sum to create total angular momentum $\mathbf{j}$.}
 			\label{fig:TotalAngularMomentumDiagram}
 		\end{figure}
@@ -73,18 +105,31 @@
 			\item $\Delta M_j = 0, \pm1$, but not $M_j=0\rightarrow M_j=0$ if $\Delta J = 0$
 		\end{enumerate}
 		
-		Figure \ref{fig:SpectralSplitting} shows that spectral splitting is dependent on the quantum number $m$, which specifies the projection of the orbital angular momentum along the z-axis of the atom.
+		Figure \ref{fig:SpectralSplitting} shows that spectral splitting is dependent on the magnetic quantum number $m$ which specifies the projection of the orbital angular momentum along the z-axis of the atom.
 		$m$ can take on $2l+1$ the values ranging from $l$ to $-l$.
 		
-		The resulting polarization of the light emitted in a transition is entirely determined by $\Delta M_j$.
-		For $\Delta M_j = 0$, the emitted photons are polarized linearly and parallel to the field lines of the applied magnetic field $\mathbf{B}$.
-		For $\Delta M_j=\pm1$, emitted photons are circularly polarized along the direction of $\mathbf{B}$ and appear linearly polarized perpendicular to $\mathbf{B}$ when viewed side-on to $\mathbf{B}$.
+		The polarization of the emitted light during the transition is also entirely determined by $\Delta m_j$.
+		For $\Delta m_j = 0$, the emitted photons are polarized linearly and parallel to the field lines of the applied magnetic field $\mathbf{B}$.
+		For $\Delta m_j=\pm1$, emitted photons are circularly polarized along the direction of $\mathbf{B}$ and appear linearly polarized perpendicular to $\mathbf{B}$ when viewed side-on to $\mathbf{B}$.
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.5\textwidth]{Images/MercuryEnergyLevelsDiagram.png}
 			\caption{Energy level transitions of mercury between quantum states. For the purposes of our observations, we are interested in the $7^3S_1 \rightarrow 6^3P_2$ transition which produces 546.1 nm light. Figure 7.39 of \cite{melissinos_experiments_1966}}
 			\label{fig:MercuryEnergyLevelsDiagram}
 		\end{figure}
+		
+		The energy difference between the hyperfine spectra is caused by the differing values of $\Delta m$ and determined by measuring the relative differences in wavelength between the fine spectra.
+		From the basic Planck relation we have
+		\begin{equation}
+			E = h\nu = \frac{hc}{\lambda}
+		\end{equation}
+		where $h$ is the Planck constant, $\nu$ is wave frequency, and $\lambda$ is wavelength.
+		
+		The relative energy difference of two wavelengths is then given by
+		\begin{equation}
+			\Delta E = -\left(\frac{hc}{\lambda^2}\right) \Delta \lambda
+		\end{equation}
+	
 
 		
 \section{Methods and Procedures}
