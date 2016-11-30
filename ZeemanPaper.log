@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.23)  24 NOV 2016 15:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.23)  29 NOV 2016 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -81,6 +81,14 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 LaTeX Info: Redefining \[ on input line 2735.
 LaTeX Info: Redefining \] on input line 2736.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
@@ -148,18 +156,18 @@ Package: gensymb 2003/07/02 v1.0 (WaS)
 ) (./ZeemanPaper.aux)
 \openout1 = `ZeemanPaper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -225,15 +233,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \celsius on input line 21.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 21.
+LaTeX Info: Redefining \celsius on input line 22.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 22.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 21.
-Package gensymb Info: Using \Omega for \ohm on input line 21.
+LaTeX Info: Redefining \ohm on input line 22.
+Package gensymb Info: Using \Omega for \ohm on input line 22.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -241,166 +249,183 @@ Package gensymb Warning: Not defining \micro.
 File: Images/SpectralSplitting.png Graphic file (type png)
 
 <use Images/SpectralSplitting.png>
-Package pdftex.def Info: Images/SpectralSplitting.png used on input line 47.
+Package pdftex.def Info: Images/SpectralSplitting.png used on input line 48.
 (pdftex.def)             Requested size: 229.5pt x 112.01709pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
  <./Images/SpectralSplitting.png>]
-<Images/TotalAngularMomentumDiagram.png, id=15, 248.93pt x 251.94125pt>
+<Images/CurrentLoopDiagram.png, id=15, 245.91875pt x 142.5325pt>
+File: Images/CurrentLoopDiagram.png Graphic file (type png)
+
+<use Images/CurrentLoopDiagram.png>
+Package pdftex.def Info: Images/CurrentLoopDiagram.png used on input line 84.
+(pdftex.def)             Requested size: 160.64929pt x 93.11478pt.
+
+<Images/TotalAngularMomentumDiagram.png, id=16, 248.93pt x 251.94125pt>
 File: Images/TotalAngularMomentumDiagram.png Graphic file (type png)
 
 <use Images/TotalAngularMomentumDiagram.png>
 Package pdftex.def Info: Images/TotalAngularMomentumDiagram.png used on input l
-ine 93.
-(pdftex.def)             Requested size: 206.5486pt x 209.04967pt.
-
-<Images/MercuryEnergyLevelsDiagram.png, id=16, 515.9275pt x 594.22pt>
+ine 121.
+(pdftex.def)             Requested size: 160.64929pt x 162.59503pt.
+ [2 <./Images/CurrentLoopDiagram.png> <./Images/TotalAngularMomentumDiagram.png
+>]
+<Images/MercuryEnergyLevelsDiagram.png, id=23, 515.9275pt x 594.22pt>
 File: Images/MercuryEnergyLevelsDiagram.png Graphic file (type png)
 
 <use Images/MercuryEnergyLevelsDiagram.png>
 Package pdftex.def Info: Images/MercuryEnergyLevelsDiagram.png used on input li
-ne 116.
+ne 144.
 (pdftex.def)             Requested size: 234.5pt x 270.08037pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 116--117
+Overfull \hbox (5.0pt too wide) in paragraph at lines 144--145
  [][] 
  []
 
-[2 <./Images/TotalAngularMomentumDiagram.png>]
-<Images/ExperimentOverview.jpg, id=22, 963.6pt x 722.7pt>
+[3 <./Images/MercuryEnergyLevelsDiagram.png>]
+<Images/ExperimentOverview.jpg, id=27, 963.6pt x 722.7pt>
 File: Images/ExperimentOverview.jpg Graphic file (type jpg)
 
 <use Images/ExperimentOverview.jpg>
-Package pdftex.def Info: Images/ExperimentOverview.jpg used on input line 145.
-(pdftex.def)             Requested size: 187.60071pt x 140.69986pt.
+Package pdftex.def Info: Images/ExperimentOverview.jpg used on input line 173.
+(pdftex.def)             Requested size: 229.80899pt x 172.34879pt.
 
-<Images/OpticsRail.jpg, id=23, 963.6pt x 722.7pt>
+<Images/OpticsRail.jpg, id=28, 963.6pt x 722.7pt>
 File: Images/OpticsRail.jpg Graphic file (type jpg)
  <use Images/OpticsRail.jpg>
-Package pdftex.def Info: Images/OpticsRail.jpg used on input line 151.
-(pdftex.def)             Requested size: 187.60071pt x 140.69986pt.
+Package pdftex.def Info: Images/OpticsRail.jpg used on input line 179.
+(pdftex.def)             Requested size: 229.80899pt x 172.34879pt.
 
-<Images/PerpendicularView.jpg, id=24, 3998.94pt x 2999.205pt>
+<Images/PerpendicularView.jpg, id=29, 3998.94pt x 2999.205pt>
 File: Images/PerpendicularView.jpg Graphic file (type jpg)
 
 <use Images/PerpendicularView.jpg>
-Package pdftex.def Info: Images/PerpendicularView.jpg used on input line 163.
-(pdftex.def)             Requested size: 187.60071pt x 140.67891pt.
+Package pdftex.def Info: Images/PerpendicularView.jpg used on input line 191.
+(pdftex.def)             Requested size: 229.80899pt x 172.34769pt.
 
-<Images/AxialView.jpg, id=25, 3998.94pt x 2999.205pt>
+<Images/AxialView.jpg, id=30, 3998.94pt x 2999.205pt>
 File: Images/AxialView.jpg Graphic file (type jpg)
 
 <use Images/AxialView.jpg>
-Package pdftex.def Info: Images/AxialView.jpg used on input line 168.
-(pdftex.def)             Requested size: 187.60071pt x 140.67891pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 181.
+Package pdftex.def Info: Images/AxialView.jpg used on input line 196.
+(pdftex.def)             Requested size: 229.80899pt x 172.34769pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 207.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
 
-<Images/FieldConfigA.jpg, id=26, 963.6pt x 722.7pt>
+<Images/FieldConfigA.jpg, id=31, 963.6pt x 722.7pt>
 File: Images/FieldConfigA.jpg Graphic file (type jpg)
 
 <use Images/FieldConfigA.jpg>
-Package pdftex.def Info: Images/FieldConfigA.jpg used on input line 197.
+Package pdftex.def Info: Images/FieldConfigA.jpg used on input line 223.
 (pdftex.def)             Requested size: 257.95143pt x 193.45541pt.
 
-<Images/FieldConfigB.jpg, id=27, 963.6pt x 722.7pt>
+<Images/FieldConfigB.jpg, id=32, 963.6pt x 722.7pt>
 File: Images/FieldConfigB.jpg Graphic file (type jpg)
 
 <use Images/FieldConfigB.jpg>
-Package pdftex.def Info: Images/FieldConfigB.jpg used on input line 203.
+Package pdftex.def Info: Images/FieldConfigB.jpg used on input line 229.
 (pdftex.def)             Requested size: 257.95143pt x 193.45541pt.
 
-Overfull \hbox (46.90286pt too wide) in paragraph at lines 196--207
+Overfull \hbox (46.90286pt too wide) in paragraph at lines 222--233
  []$[]$$[]$ 
  []
 
-[3 <./Images/MercuryEnergyLevelsDiagram.png>] [4 <./Images/ExperimentOverview.j
-pg> <./Images/OpticsRail.jpg> <./Images/PerpendicularView.jpg> <./Images/AxialV
-iew.jpg>] [5 <./Images/FieldConfigA.jpg> <./Images/FieldConfigB.jpg>]
-<Images/B=0Pattern.jpg, id=39, 693.59125pt x 529.98pt>
+<Images/B=0Pattern.jpg, id=33, 693.59125pt x 529.98pt>
 File: Images/B=0Pattern.jpg Graphic file (type jpg)
 
 <use Images/B=0Pattern.jpg>
-Package pdftex.def Info: Images/B=0Pattern.jpg used on input line 219.
+Package pdftex.def Info: Images/B=0Pattern.jpg used on input line 246.
 (pdftex.def)             Requested size: 234.5pt x 179.17995pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 219--220
+Overfull \hbox (5.0pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
-<Images/Run1_ParallelPolarizer.png, id=40, 697.60625pt x 539.01375pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Images/Run1_ParallelPolarizer.png, id=34, 697.60625pt x 539.01375pt>
 File: Images/Run1_ParallelPolarizer.png Graphic file (type png)
 
 <use Images/Run1_ParallelPolarizer.png>
 Package pdftex.def Info: Images/Run1_ParallelPolarizer.png used on input line 2
-47.
+79.
 (pdftex.def)             Requested size: 234.5pt x 181.18962pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 247--248
+Overfull \hbox (5.0pt too wide) in paragraph at lines 279--280
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 255.
+               Default added (so using `tbp') on input line 287.
 
-<Images/Run2_PerpendicularPolarizer.png, id=41, 558.085pt x 440.64626pt>
+<Images/Run2_PerpendicularPolarizer.png, id=35, 558.085pt x 440.64626pt>
 File: Images/Run2_PerpendicularPolarizer.png Graphic file (type png)
 
 <use Images/Run2_PerpendicularPolarizer.png>
 Package pdftex.def Info: Images/Run2_PerpendicularPolarizer.png used on input l
-ine 292.
+ine 324.
 (pdftex.def)             Requested size: 234.5pt x 185.15085pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 292--293
+Overfull \hbox (5.0pt too wide) in paragraph at lines 324--325
  [][] 
  []
 
-[6 <./Images/B=0Pattern.jpg> <./Images/Run1_ParallelPolarizer.png>] [7]
+
+Underfull \vbox (badness 3492) has occurred while \output is active []
+
+ [4]
+[5 <./Images/ExperimentOverview.jpg> <./Images/OpticsRail.jpg> <./Images/Perpen
+dicularView.jpg> <./Images/AxialView.jpg>] [6 <./Images/FieldConfigA.jpg> <./Im
+ages/FieldConfigB.jpg>] [7]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 303.
+               Default added (so using `tbp') on input line 335.
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 313--313
+Underfull \hbox (badness 1210) in paragraph at lines 345--345
 \OT1/cmr/bx/n/10 mean cal-cu-lated value for all in-ter-fer-ence
  []
 
-(./ZeemanPaper.bbl) [8 <./Images/Run2_PerpendicularPolarizer.png>]
-(./ZeemanPaper.aux) ) 
+(./ZeemanPaper.bbl [8 <./Images/B=0Pattern.jpg> <./Images/Run1_ParallelPolarize
+r.png> <./Images/Run2_PerpendicularPolarizer.png>]) [9
+
+] (./ZeemanPaper.aux) ) 
 Here is how much of TeX's memory you used:
- 3437 strings out of 493029
- 52465 string characters out of 6136233
- 117433 words of memory out of 5000000
- 6924 multiletter control sequences out of 15000+600000
- 10595 words of font info for 38 fonts, out of 8000000 for 9000
+ 3533 strings out of 493029
+ 53641 string characters out of 6136233
+ 125676 words of memory out of 5000000
+ 7003 multiletter control sequences out of 15000+600000
+ 14887 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,9n,39p,790b,492s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb>
-Output written on ZeemanPaper.pdf (8 pages, 7004791 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.
+pfb>
+Output written on ZeemanPaper.pdf (9 pages, 7024687 bytes).
 PDF statistics:
- 99 PDF objects out of 1000 (max. 8388607)
- 62 compressed objects within 1 object stream
+ 107 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

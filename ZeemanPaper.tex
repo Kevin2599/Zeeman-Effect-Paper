@@ -1,6 +1,7 @@
 \documentclass[twocolumn]{article}
 
 \usepackage{amsmath}
+\usepackage{bm}
 \usepackage{caption}
 \usepackage{graphicx}
 \usepackage{float}
@@ -59,6 +60,33 @@
 		\end{equation}
 		where $m$ is the mass of the electron, $\mu_0$ is the Bohr Magneton, fundamental magnetic moment of the electron, and $H$ is the applied magnetic field.
 		
+		To understand the origin of these interactions, consider a simple current loop such as the one shown in Figure \ref{fig:CurrentLoopDiagram}.
+		The associated magnetic moment $\mathbf{\mu}$ of the loop has the magnitude:
+		\begin{equation}
+			\mu = IA
+		\end{equation}
+		Where $A=\pi a^2$ is the disk area enclosed by the loop.
+		The direction of $\mathbf{\mu}$ is given by the right-hand rule.
+		
+		When an external magnetic field $\mathbf{B}$ is applied, the torque on the loop is given by
+		\begin{equation}
+			\boldsymbol{\tau} = \boldsymbol{\mu} \times \mathbf{B}
+		\end{equation}
+		The resulting potential energy of the current loop in the magnetic field is
+		\begin{equation}
+			E_{B} = -\boldsymbol{\mu}\cdot \mathbf{B}
+		\end{equation}
+		That is, the magnetic field will do work on the current loop when its orientation is changed in the field.
+		
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{Images/CurrentLoopDiagram}
+			\caption{A loop of current about a vertical axis with magnetic moment $\mathbf{\mu}$.}
+			\label{fig:CurrentLoopDiagram}
+		\end{figure}
+
+		
 		The Bohr Magneton arises from modeling the electron classically as a current loop with current density
 		\begin{equation}
 			\mathbf{J(x)} = -e\mathbf{v} \delta\left(\mathbf{x} - \mathbf{r}\right)
@@ -90,7 +118,7 @@
 		
 		\begin{figure}
 			\centering
-			\includegraphics[width=0.90\linewidth]{Images/TotalAngularMomentumDiagram}
+			\includegraphics[width=0.7\linewidth]{Images/TotalAngularMomentumDiagram}
 			\caption{Electron spin angular momentum $\mathbf{s}$ and orbital angular momentum $\mathbf{l}$ sum to create total angular momentum $\mathbf{j}$.}
 			\label{fig:TotalAngularMomentumDiagram}
 		\end{figure}
@@ -136,19 +164,19 @@
 	The Pasco Scientific Model SE-9654 Zeeman Effect Experiment was used to make all observations.
 	The experiment consisted of two large solenoids oriented along the same axis with an air gap between them in which a mercury lamp was placed.
 	An optical rail was used to align a polarizing filter, a collimating lens, an interference filter, a Fabry-Perot interferometer, and a CMOS camera.
-	The basic experimental technique consisted of imaging the interference pattern of the 546.1 nm mercury spectral line through the polarizer and Fabry-Perot interferometer.
+	The basic experimental technique consisted of imaging the interference pattern of the 546.1 nm mercury spectral line with the CMOS camera through the polarizer and Fabry-Perot interferometer.
 	Figure 
 	
 	\begin{figure*}
 		\centering
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width = 0.8\textwidth]{Images/ExperimentOverview.jpg}
+			\includegraphics[width = 0.98\textwidth]{Images/ExperimentOverview.jpg}
 			\caption{}
 			\label{subfig:Overview}
 			
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
-				\includegraphics[width = 0.8\textwidth]{Images/OpticsRail.jpg}
+				\includegraphics[width = 0.98\textwidth]{Images/OpticsRail.jpg}
 				\caption{}
 				\label{subfig:OpticsRail}
 				
@@ -160,20 +188,18 @@
 	\begin{figure*}
 		\centering
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width = 0.8\textwidth]{Images/PerpendicularView.jpg}
+			\includegraphics[width = 0.98\textwidth]{Images/PerpendicularView.jpg}
 			\caption{}
 			\label{subfig:PerpView}
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
-			\includegraphics[width = 0.8\textwidth]{Images/AxialView.jpg}
+			\includegraphics[width = 0.98\textwidth]{Images/AxialView.jpg}
 			\caption{}
 			\label{subfig:AxialView}
 		\end{subfigure}%
 		\caption{\textbf{Detail view of the solenoid with the mercury lamp source. Figure \ref{subfig:PerpView} shows the configuration with the magnetic field lines perpendicular to the light source. Figure \ref{subfig:AxialView} shows the axial field configuration looking down the sight-hole of the solenoid to the mercury lamp.}}
 		\label{fig:SolenoidDetail}
 	\end{figure*}
-	
-	
 	
 	To study the Zeeman effect, observations of a mercury lamp were made first with no magnetic field and $90\deg$ polarization, then with an approximately $1T$ magnetic field.
 	Observations with a magnetic field included:
@@ -213,14 +239,18 @@
 \section{Data and Results} \label{sec:DataAndResults}
 	 
 	 With no applied magnetic field, the 546.1nm mercury spectral line as viewed through the Fabry-Perot interferometer produces the interference pattern as shown in Figure \ref{fig:B=0Pattern}.
+	 The $B=0$ interference pattern shows discrete rings, with the innermost ring denoted as the $k=0$ ring, the next innermost ring the $k=1$ ring, and so on.
 	 
 	 \begin{figure}
-		\centering
-		\includegraphics[width=0.5\textwidth]{Images/B=0Pattern}
-		\caption{Interference pattern of the 546.1nm mercury line with no applied magnetic field. The interference lines are singular.}
-		\label{fig:B=0Pattern}
-	\end{figure}
- 
+	 	\centering
+	 	\includegraphics[width=0.5\textwidth]{Images/B=0Pattern}
+	 	\caption{Interference pattern of the 546.1nm mercury line with no applied magnetic field. The interference lines are singular.}
+	 	\label{fig:B=0Pattern}
+	 \end{figure}
+	 
+	 Table \ref{tab:B0Data} shows the measured radii of the interference rings for the $k=1$ through $k=4$ rings.
+	 The $k=0$ ring was not used in subsequent observations and calculations because it was not resolved enough to be measurable.
+	 
 	 \begin{table}[h]
 	 	\centering
 	 	\begin{tabular}{l|l}
@@ -232,20 +262,22 @@
 	 	\end{tabular}
 	 	\caption{\textbf{Interference ring radii of the mercury 546.1 nm spectra with no magnetic field.}}
 	 	\label{tab:B0Data}
-	 	
 	 \end{table}
-	\subsection{Spectra Through a Perpendicular Magnetic Field}
-		The first observations were made such that the mercury lamp was viewed through a magnetic field perpendicular to the travel of the mercury spectra, as is shown in \ref{subfig:PerpFieldConfig}.
+	 
+	 The ``bullseye'' $B=0$ pattern will be the standard interference pattern we will compare all subsequent patterns on.
+	 
+	\subsection{Observations perpendicular to the Magnetic Field}
+		The first observations were made such that the mercury lamp was viewed perpendicularly to the magnetic field, as is shown in Figure \ref{subfig:PerpFieldConfig}.
 		With this magnetic field configuration, observations were made with the polarizer at $0\degree$ (Parallel to the field lines), and $90\degree$ (perpendicular to the field lines).
 		This allowed us to observe the hyperfine spectral lines with polarization parallel and perpendicular to the magnetic field lines, which correspond to photons created in $\Delta M_z = 0$ and $\Delta M_Z = \pm1$ transitions, respectively, of the mercury electrons.
-		\subsubsection{Spectra with Field-Perpendicular Polarization}
+		\subsubsection{Spectra with Field-Parallel Polarization}
 			
 			With the polarizer set to $90\degree$, we observed the mercury spectra with polarization perpendicular to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
 			
 			\begin{figure}
 				\centering
 				\includegraphics[width=0.5\textwidth]{Images/Run1_ParallelPolarizer}
-				\caption{Interference pattern of the mercury spectrum with a ~1T applied magnetic through a polarizer oriented perpendicular to the magnetic field lines. The interference rings correspond to light produced by $\Delta M_z = 0$ transitions polarized perpendicularly to the magnetic field.}
+				\caption{Interference pattern of the mercury spectrum with a ~1T applied magnetic through a polarizer oriented parallel to the magnetic field lines. The interference rings correspond to light produced by $\Delta M_z = 0$ transitions polarized parallel to the magnetic field lines.}
 				\label{fig:Triplet90deg}
 			\end{figure}
 			
