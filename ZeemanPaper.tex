@@ -157,7 +157,101 @@
 		\begin{equation}
 			\Delta E = -\left(\frac{hc}{\lambda^2}\right) \Delta \lambda
 		\end{equation}
-	
+		
+		\begin{equation}
+			g_L = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
+			\label{eq:LandeGFactor}
+		\end{equation}
+		
+		\begin{equation}
+			\Delta E = M_z g_L B \mu_B
+			\label{eq:EnergyShift}
+		\end{equation}
+		
+		\subsection{Calculation of the Bohr Magneton} \label{subsec:BohrCalc}
+			The fundamental unit of magnetic moment, the Bohr magneton, is given by
+			
+			\begin{equation}
+				\mu_B = \frac{eh}{4\pi m_e}
+			\end{equation}
+			where $m_e$ is the electron mass, $e$ is the electron charge, and $h$ is Planck's constant.
+			We are interested in measuring this fundamental quantity through observation.
+			To do so, we will measure the magnitude of the hyperfine spectral line splitting in the presence of a magnetic field, and relate this splitting to the magnitude of the Bohr magneton.
+			
+			Consider the 546.1 nm mercury line in the presence of a magnetic field.
+			As described in the previous section, the interaction of the spin-coupled total angular momentum of the valence electrons will interact with the magnetic field to produce hyperfine structure with energy, and thus wavelength, dependent on the value of $\Delta M_z$ in the transition.
+			
+			For the case of $M_z = 0 \rightarrow M_z = 0$, the resulting spectral line will be the same as the un-split spectral line in the $B=0$ case with $\lambda = 546.1 nm$.
+			In the $M_z = +1 \rightarrow M_z = +1$ and $M_z = -1 \rightarrow M_z = -1$ cases, however, the resulting hyperfine spectral line will be of slightly greater or less energy than the $B=0$ spectral line, thus resulting in a ``triplet" hyperfine structure in which the central 546.1 nm spectral line is surrounded on either side by two additional hyperfine spectral lines.
+			
+			We calculate the Land\'{e} g-factor for both the S and P states using equation (\ref{eq:LandeGFactor}).
+			For the $^3S_1$ state, $L=0$ and $S=1$, thus $J = 1$, and $g_S = 2$.
+			For the $^3P_2$ state, $L=1$ and $S=1$, thus $J=2$, and $g_P = 3/2$.
+			
+			Thus, using equation (\ref{eq:EnergyShift}), the energy shifts for the $M_z = \pm1$ cases for the $S$ and $P$ states in the presence of a magnetic field will be:
+			\begin{equation}
+				\Delta E_S = \pm 2B\mu_B
+			\end{equation}
+			\begin{equation}
+				\Delta E_P = \pm \frac{3}{2}B\mu_B
+			\end{equation}
+			
+			Thus, the photon energy for the $M_z = +1 \rightarrow M_z = +1$ transition will be
+			\begin{equation}
+				E = h\nu_+ = (E_S + \Delta E_S) - (E_P + \Delta E_P)
+			\end{equation}
+			and for the $M_z = -1 \rightarrow M_z = -1$ it will be
+			\begin{equation}
+				E = h\nu_- = (E_S - \Delta E_S) - (E_P - \Delta E_P)
+			\end{equation}
+			
+			The difference in energy between the two hyperfine lines will then be
+			\begin{equation}
+				h(\nu_+ - \nu_-) = 2(\Delta E_S - \Delta E_P)
+			\end{equation}
+			Which is then related to the Bohr magneton by
+			\begin{equation}
+				2(\Delta E_S - \Delta E_P) = 2\left( 2B\mu_B - \frac{3}{2}B \mu_B \right) = B \mu_B
+			\end{equation}
+			Thus we have a relation for the difference between the inner and outer hyperfine spectra frequencies (and therefore their wavelengths), and the value of the Bohr magneton.
+			\begin{equation}
+				h(\nu_+ - \nu_-) = B\mu_B
+			\end{equation}
+			
+			We convert these frequencies to wavelengths using the fundamental relation $f = c/\lambda$
+			
+			\begin{equation}
+				h \left( \frac{c}{\lambda_+} - \frac{c}{\lambda_-} \right) = \frac{hc \left(\lambda_- - \lambda_+ \right)}{\lambda_- \lambda_+}
+			\end{equation}
+			\begin{equation}
+				= \frac{hc\Delta\lambda}{\lambda^2} = B\mu_B
+			\end{equation}
+			where $\lambda_-\lambda_+ = \lambda^2$ to a good approximation because of the very small difference in wavelength between the hyperfine spectra.
+			
+			Rearranging, we have
+			\begin{equation}
+				\Delta\lambda = \frac{B\mu_B\lambda^2}{hc}
+			\end{equation}
+			
+			We now have a relation between the change in wavelength between the outer hyperfine spectra and the Bohr magneton.
+			We must now develop a method and theory of measuring these very slight differences in wavelength.
+			This is accomplished using a Fabry-Perot interferometer to make these slight wavelength differences measurable.
+			
+			\subsubsection{Fabry-Perot Interferometer}
+				In order to measure very slight wavelength differences, we employed a Fabry-Perot interferometer.
+				The main mechanism of the interferometer is the etalon, which consists of two partially optically reflected glass plates very precisely aligned parallel to each other.
+				
+				\begin{equation}
+					\frac{d}{f^2}\lambda = \frac{k}{\left(R_k^2 - R_0^2 \right)} = C_0
+					\label{eq:ConstantEq}
+				\end{equation}
+				Where $d$ is the gap distance of the Fabry-Perot etalon, approximately 1.995 mm.
+			
+			\begin{equation}
+				\mu_B = \left( \frac{C_0 hc}{2dB} \right) \left( R_{k+}^2 - R_{k-}^2 \right)
+				\label{eq:BohrEquation}
+			\end{equation}
+		
 
 		
 \section{Methods and Procedures}
@@ -268,11 +362,12 @@
 	 
 	\subsection{Observations perpendicular to the Magnetic Field}
 		The first observations were made such that the mercury lamp was viewed perpendicularly to the magnetic field, as is shown in Figure \ref{subfig:PerpFieldConfig}.
-		With this magnetic field configuration, observations were made with the polarizer at $0\degree$ (Parallel to the field lines), and $90\degree$ (perpendicular to the field lines).
-		This allowed us to observe the hyperfine spectral lines with polarization parallel and perpendicular to the magnetic field lines, which correspond to photons created in $\Delta M_z = 0$ and $\Delta M_Z = \pm1$ transitions, respectively, of the mercury electrons.
+		
+		From the theory discussed in section \ref{sec:Theory}, different values of $\Delta M_z$ in the mercury transition will produce different polarizations of the emitted light.
+		Thus, we can use polarization to identify particular hyperfine lines which correspond to certain values of $\Delta M_z$.
 		\subsubsection{Spectra with Field-Parallel Polarization}
 			
-			With the polarizer set to $90\degree$, we observed the mercury spectra with polarization perpendicular to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
+			With a $1T$ magnetic field and the polarizer set parallel to the field lines, we observed the mercury spectra with polarization parallel to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
 			
 			\begin{figure}
 				\centering
@@ -282,8 +377,7 @@
 			\end{figure}
 			
 			Using PASCO Software, The radii of the inner and outer rings of the $k=1$ through $k=4$ interference rings were measured.
-			These radii are given in Table \ref{tab:RadiusMeasurements}.
-			
+			These radii are given in Table \ref{tab:RadiusMeasurements} and will be used to calculate the value of the Bohr magneton in Section \ref{subsec:BohrMagneton}.
 			\begin{table*}[]
 				\centering
 				\begin{tabular}{l|lll}
@@ -330,22 +424,62 @@
 	\subsection{Spectra Along an Axial Magnetic Field}
 	
 	\subsection{Measurement of the Bohr Magneton} \label{subsec:BohrMagneton}
-		With the precise measurement of spectral line splitting in the presence of the perpendicular magnetic field, it was possible to measure the value of the Bohr magneton.
+		Using the measurements of the split interference rings from the $B\neq 0$ case we were able to establish a value for the Bohr magneton.
+		The inner and outer radius of each interference triplet was measured using PASCO software and is tabulated in Table \ref{tab:RadiusMeasurements}.
+		
+		To calculate the magnitude of the Bohr magneton, we use the theory from Section \ref{subsec:BohrCalc}.
+		First, we must calculate the constant $C_0$ in equation (\ref{eq:ConstantEq}).
+		This is accomplished using the un-split interference ring radii from the $B=0$ case.
+		These measurements are given in Table \ref{tab:B0Data}.
+		
+		Using equation (\ref{eq:ConstantEq}), the value of $C_0$ for each interference ring $k=1$ through $k=4$ was calculated.
+		The average of these values was then taken as the best value for $C_0$.
+		Table \ref{tab:C0} lists the calculated values for each interference ring, as well as the overall mean and standard deviation.
 		
 		\begin{table}[]
 			\centering
 			\begin{tabular}{l|l}
-				$\mathbf{k}$    & $\mathbf{\mu_B \ (J/T)}$ \\ \hline
+				k & $C_0$ $(m^{-2})$ \\ \hline
+				4 & 6.4523 \\
+				3 & 6.4575 \\
+				2 & 6.4633 \\
+				1 & 6.4598 \\ \hline
+				Mean & $6.458\pm0.005$
+			\end{tabular}
+			\caption{Measured values of the constant $C_0$ from the $B=0$ interference rings.}
+			\label{tab:C0}
+		\end{table}
+		
+		With a precise measured value for $C_0$, values for the Bohr magneton can then be calculated with equation (\ref{eq:BohrEquation}).
+		The difference between inner and outer radii for each interference ring in the $B\neq 0$, parallel-field polarization case, which is related to the magnitude of the change in wavelength between the $\delta M_z = \pm1$ transitions, is used to calculate the Bohr magneton.
+		These values for $R_{k+}$ and $R_{k-}$ are given in Table \ref{tab:RadiusMeasurements}.
+		
+		The remaining constants in equation (\ref{eq:BohrEquation}) are Planck's constant, $h = 6.63\times10^{-34}$, the speed of light, $c = 2.99\times10^8 m/s$, the gap distance of the Fabry-Perot etalon, $d = 1.995\times10^{-3} m$, and the magnitude of the magnetic field at $10 A$, $B = 1.105 T$.
+		
+		The calculated values for the Bohr magneton for each interference ring as well as the mean and standard deviation are given in Table \ref{tab:BohrCalcs}.
+		
+		\begin{table}[]
+			\centering
+			\begin{tabular}{l|l}
+				$\mathbf{k}$    & $\mathbf{\boldsymbol{\mu}_B \ (J\cdot T^{-1})}$ \\ \hline
 				\textbf{1}    & $9.16\times10^{-24}$   \\
 				\textbf{2}    & $9.24\times10^{-24}$   \\
 				\textbf{3}    & $9.36\times10^{-24}$   \\
 				\textbf{4}    & $9.10\times10^{-24}$   \\ \hline
-				\textbf{Mean} & $9.22\times10^{-24}\pm0.6\times10^{-24}$  
+				\textbf{Mean} & $9.22\times10^{-24}\pm0.06\times10^{-24}$  
 			\end{tabular}
-			\caption{\textbf{Calculated values of the Bohr magneton $\mathbf{\mu_B}$ for each interference ring, and the mean calculated value for all interference rings.}}
+			\caption{Calculated values of the Bohr magneton $\mu_B$ for each interference ring, and the mean calculated value for all interference rings.}
 			\label{tab:BohrCalcs}
 		\end{table}
-	
+		
+		Our calculated best value for the magnitude of the Bohr magneton is thus 
+		\begin{equation}
+			\mu_B = 9.22\times10^{-24}\pm 0.06\times10^{-24} J\cdot T^{-1}
+		\end{equation}
+		
+		For comparison, the SI value of the Bohr magneton is $9.274\times10^{-24} J\cdot T^{-1}$, which is within our margin of measured random error.
+		Additionally, our measured value agrees with the accepted SI value to within 0.63\%.
+		
 
 \section{Conclusion} \label{sec:Conclusion}
 
