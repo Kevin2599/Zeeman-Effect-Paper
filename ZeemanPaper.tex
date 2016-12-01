@@ -241,6 +241,13 @@
 				In order to measure very slight wavelength differences, we employed a Fabry-Perot interferometer.
 				The main mechanism of the interferometer is the etalon, which consists of two partially optically reflected glass plates very precisely aligned parallel to each other.
 				
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.7\linewidth]{Images/EtalonDiagram}
+					\caption{Cross-section of the Fabry-Perot etalon. Light entering the etalon undergoes multiple internal reflections before being reflected or transmitted externally. In our notation, the etalon gap distance $l$ is referred to as $d$.\cite{stigmatella_aurantiaca_file:etalon-2.svg_2012}}
+					\label{fig:EtalonDiagram}
+				\end{figure}
+
 				\begin{equation}
 					\frac{d}{f^2}\lambda = \frac{k}{\left(R_k^2 - R_0^2 \right)} = C_0
 					\label{eq:ConstantEq}
@@ -313,12 +320,12 @@
 	
 	\begin{figure*}
 		\centering
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.5\textwidth}
 			\includegraphics[width = 1.0\textwidth]{Images/FieldConfigA.jpg}
 			\caption{\textbf{Perpendicular field configuration.}}
 			\label{subfig:PerpFieldConfig}
 		\end{subfigure}%
-		\begin{subfigure}{0.55\textwidth}
+		\begin{subfigure}{0.5\textwidth}
 			\centering
 			\includegraphics[width=1.0\textwidth]{Images/FieldConfigB.jpg}
 			\caption{\textbf{Axial field configuration.}}
@@ -335,12 +342,12 @@
 	 With no applied magnetic field, the 546.1nm mercury spectral line as viewed through the Fabry-Perot interferometer produces the interference pattern as shown in Figure \ref{fig:B=0Pattern}.
 	 The $B=0$ interference pattern shows discrete rings, with the innermost ring denoted as the $k=0$ ring, the next innermost ring the $k=1$ ring, and so on.
 	 
-	 \begin{figure}
+	 \begin{figure*}
 	 	\centering
-	 	\includegraphics[width=0.5\textwidth]{Images/B=0Pattern}
+	 	\includegraphics[width=0.65\linewidth]{Images/B=0Pattern}
 	 	\caption{Interference pattern of the 546.1nm mercury line with no applied magnetic field. The interference lines are singular.}
 	 	\label{fig:B=0Pattern}
-	 \end{figure}
+	 \end{figure*}
 	 
 	 Table \ref{tab:B0Data} shows the measured radii of the interference rings for the $k=1$ through $k=4$ rings.
 	 The $k=0$ ring was not used in subsequent observations and calculations because it was not resolved enough to be measurable.
@@ -363,18 +370,29 @@
 	\subsection{Observations perpendicular to the Magnetic Field}
 		The first observations were made such that the mercury lamp was viewed perpendicularly to the magnetic field, as is shown in Figure \ref{subfig:PerpFieldConfig}.
 		
+		When viewed without a polarizer, the interference pattern appears as in Figure \ref{fig:Run2_NoPolarizer_detail}.
+		All nine of the transition spectra, corresponding to all 9 possible $\Delta M_z$ transition values, can be seen.
+		
+		\begin{figure*}
+			\centering
+			\includegraphics[width=0.6\linewidth]{Images/Run2_NoPolarizer_detail}
+			\caption{Mercury spectra in the presence of a magnetic field viewed without a polarizer. All spectra from all nine possible $\Delta M_z$ transitions can be seen.}
+			\label{fig:Run2_NoPolarizer_detail}
+		\end{figure*}
+
 		From the theory discussed in section \ref{sec:Theory}, different values of $\Delta M_z$ in the mercury transition will produce different polarizations of the emitted light.
 		Thus, we can use polarization to identify particular hyperfine lines which correspond to certain values of $\Delta M_z$.
-		\subsubsection{Spectra with Field-Parallel Polarization}
-			
+		
+		\subsubsection{$\mathbf{\Delta M_z = 0}$ Transition spectra}
 			With a $1T$ magnetic field and the polarizer set parallel to the field lines, we observed the mercury spectra with polarization parallel to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
+			This is what has been historically termed the ``Normal" Zeeman effect.
 			
-			\begin{figure}
+			\begin{figure*}
 				\centering
-				\includegraphics[width=0.5\textwidth]{Images/Run1_ParallelPolarizer}
-				\caption{Interference pattern of the mercury spectrum with a ~1T applied magnetic through a polarizer oriented parallel to the magnetic field lines. The interference rings correspond to light produced by $\Delta M_z = 0$ transitions polarized parallel to the magnetic field lines.}
+				\includegraphics[width=0.6\linewidth]{Images/Run1_ParallelPolarizer}
+				\caption{The ``Normal" Zeeman effect. Mercury interference pattern viewed perpendicular to the magnetic field lines through a polarizer oriented parallel to the field. The interference rings correspond to photons produced by $\Delta M_z = 0$ transitions polarized parallel to the magnetic field lines.}
 				\label{fig:Triplet90deg}
-			\end{figure}
+			\end{figure*}
 			
 			Using PASCO Software, The radii of the inner and outer rings of the $k=1$ through $k=4$ interference rings were measured.
 			These radii are given in Table \ref{tab:RadiusMeasurements} and will be used to calculate the value of the Bohr magneton in Section \ref{subsec:BohrMagneton}.
@@ -412,17 +430,23 @@
 				\label{tab:RadiusMeasurements}
 			\end{table*}
 			
-		\subsubsection{Spectra with Field-Parallel Polarization}
-		\begin{figure}
+		\subsubsection{$\mathbf{\Delta M_z = \pm1}$ Transition Spectra}
+		\begin{figure*}
 			\centering
-			\includegraphics[width=0.5\textwidth]{Images/Run2_PerpendicularPolarizer}
-			\caption{Interference pattern in the presence of an external magnetic field with a polarizer oriented parallel to the magnetic field lines.}
+			\includegraphics[width=0.55\linewidth]{Images/Run2_PerpendicularPolarizer}
+			\caption{Interference pattern viewed through a polarizer oriented perpendicular to the magnetic field lines. The $\Delta M_z = 0$ transition spectra polarized parallel to the magnetic field cannot be seen, leaving a large gap between the circularly-polarized $\Delta M_z = \pm1$ transition spectra.}
 			\label{fig:Run2_0Deg}
-		\end{figure}
+		\end{figure*}
 
 		
 	\subsection{Spectra Along an Axial Magnetic Field}
-	
+		\begin{figure*}
+			\centering
+			\includegraphics[width=0.55\linewidth]{Images/Run3_AxialField}
+			\caption{Interference pattern viewed axially along the magnetic field through the sight-hole in the electromagnet as shown in Figure \ref{subfig:AxialFieldConfig}. Only the circularly-polarized $\Delta M_z = \pm1$ transition spectra can be seen since photons from the $\Delta M_z = 0$ transition spectra cannot propagate in this direction because their $\mathbf{E}$ and $\mathbf{B}$ field vectors must be perpendicular to their propagation direction.}
+			\label{fig:Run3_AxialField}
+		\end{figure*}
+
 	\subsection{Measurement of the Bohr Magneton} \label{subsec:BohrMagneton}
 		Using the measurements of the split interference rings from the $B\neq 0$ case we were able to establish a value for the Bohr magneton.
 		The inner and outer radius of each interference triplet was measured using PASCO software and is tabulated in Table \ref{tab:RadiusMeasurements}.
@@ -477,13 +501,17 @@
 			\mu_B = 9.22\times10^{-24}\pm 0.06\times10^{-24} J\cdot T^{-1}
 		\end{equation}
 		
-		For comparison, the SI value of the Bohr magneton is $9.274\times10^{-24} J\cdot T^{-1}$, which is within our margin of measured random error.
+		For comparison, the SI value of the Bohr magneton is $9.274\times10^{-24} J\cdot T^{-1}$\cite{_codata_????}, which is within our margin of measured random error.
 		Additionally, our measured value agrees with the accepted SI value to within 0.63\%.
 		
 
 \section{Conclusion} \label{sec:Conclusion}
-
-\bibliographystyle{ieeetr}
+	We observed the Zeeman  effect and verified its effect on the 546.1 nm mercury spectral line in the presence of a $\approx1T$ magnetic field.
+	We verified that the hyperfine structure was produced by transitions of various changes of the quantum number $\Delta M_z$ which are constrained by the quantum selection rules.
+	Using a polarizer, we showed that the different hyperfine spectra have either parallel or circular polarization along the magnetic field lines.
+	We were able to separately observe light polarized parallel to the magnetic field lines created in $\Delta M_z = 0$ transitions, as well as axially circular-polarized light created in $\Delta M_z = \pm1$ transitions.
+	Finally, we arrived at a measured value for the Bohr magneton of $\mu_B = 9.22\times10^{-24}\pm 0.06\times10^{-24} J\cdot T^{-1}$, which is within 0.63\% of the accepted SI value.
+\bibliographystyle{plain}
 \bibliography{ZeemanPaper}
 
 \end{document}

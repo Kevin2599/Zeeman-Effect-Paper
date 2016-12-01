@@ -1,7 +1,16 @@
 \begin{thebibliography}{1}
 
+\bibitem{_codata_????}
+{CODATA} {Value}: {Bohr} magneton.
+
 \bibitem{melissinos_experiments_1966}
-A.~Melissinos, {\em Experiments in {Modern} {Physics}}.
+A.C. Melissinos.
+\newblock {\em Experiments in {Modern} {Physics}}.
 \newblock Academic Press, 1966.
+
+\bibitem{stigmatella_aurantiaca_file:etalon-2.svg_2012}
+{Stigmatella aurantiaca}.
+\newblock File:{Etalon}-2.svg, July 2012.
+\newblock Page Version ID: 502562557.
 
 \end{thebibliography}
