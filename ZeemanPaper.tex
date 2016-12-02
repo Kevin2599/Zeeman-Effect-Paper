@@ -14,7 +14,7 @@
 
 %opening
 \title{Laboratory Observations of the Zeeman Effect}
-\author{Jack Nelson,\\
+\author{Jack Nelson,\footnote{With student Chongmo Tang as lab partner.}\\
 	Physics Department,\\
 	Occidental College, Los Angeles, CA}
 \date{November 2016}
@@ -24,12 +24,14 @@
 \maketitle
 
 \begin{abstract}
-	
+	We report our observations of the Zeeman effect in the 546.1 nm mercury spectral line in a 1T magnetic field.
+	Using a polarizing filter, we were able to observe hyperfine structure in the spectrum from transitions with particular changes in the quantum number $M_j$, verifying through observation the properties anticipated by theory.
+	We used measurements of the hyperfine structure of the ``Normal" Zeeman effect to calculate a value for the Bohr magneton, $\mu_B = 9.22\times10^{-24}\pm 0.06\times10^{-24} J\cdot T^{-1}$, that is within 0.63\% agreement with the modern accepted value
 \end{abstract}
 
 \section{Introduction} \label{sec:Intro}
-	\subsection{Historical Background}
-
+	We begin with an overview of the theory behind the Zeeman effect, then proceed into a discussion and derivation of the equation we used to calculate the value of the Bohr magneton from our measurements.
+	
 	\subsection{Theoretical Overview} \label{sec:Theory}
 		The splitting of the spectra of mercury into hyperfine lines when an external magnetic field is applied is the result of the mercury atom's magnetic-dipole interaction with the external magnetic field.
 		 
@@ -46,19 +48,18 @@
 		\begin{figure}
 			\centering
 			\includegraphics[width=1.0\linewidth]{Images/SpectralSplitting}
-			\caption{A single spectral line caused by an atomic energy transition will be split into multiple ``hyperfine" lines due to the interaction of the total angular momentum of the valence electrons with an external magnetic field. (a) shows the transition in the absence of an external magnetic field. The transition between the $l=2$ and the $l=1$ states ($d\rightarrow p$) produces a single spectral line. (b) shows how these formerly single energy-levels are split into multiple states in the presence of an external magnetic field. (c) shows the possible transitions between the new states, each of which produces a different spectral line with slightly different wavelength.}
+			\caption{A single spectral line caused by an atomic energy transition will be split into multiple ``hyperfine" lines due to the interaction of the total angular momentum of the valence electrons with an external magnetic field. (a) shows the transition in the absence of an external magnetic field. The transition between the $l=2$ and the $l=1$ states ($d\rightarrow p$) produces a single spectral line. (b) shows how these formerly single energy-levels are split into multiple states in the presence of an external magnetic field. (c) shows the possible transitions between the new states, each of which produces a different spectral line with slightly different wavelength.\cite{melissinos_experiments_1966}}
 			\label{fig:SpectralSplitting}
 		\end{figure}
 		
-		The following discussion is a summary of that in chapter 2 of \cite{melissinos_experiments_1966} on the Zeeman Effect.
-		For a more detailed discussion of the derivation and consequences, consult that reference.
+		The following discussion is a summary of the theory behind the Zeeman effect. For more detailed discussions and derivations, see \cite{melissinos_experiments_1966} and \cite{stoltenberg_zeeman_2007}.
 		
-		Hyperfine splitting in the presence of a magnetic field is due to the interactions of the valence electrons with the magnetic field.
-		These interactions result in an added energy $\Delta E$ per electron given by
+		Hyperfine splitting in the presence of a magnetic field is due to the magnetic dipole interactions of an electron with the magnetic field.
+		These interactions result in an added energy $\Delta E$ per electron for a quantum state that is given by
 		\begin{equation}
-			\Delta E = m\mu_0H
+			\Delta E = m\mu_0B
 		\end{equation}
-		where $m$ is the mass of the electron, $\mu_0$ is the Bohr Magneton, fundamental magnetic moment of the electron, and $H$ is the applied magnetic field.
+		where $m$ is the quantum number quantifying the projection of the total angular momentum along the z-axis of the atom, $\mu_0$ is the Bohr magneton, the fundamental magnetic moment of the electron, and $B$ is the applied magnetic field.
 		
 		To understand the origin of these interactions, consider a simple current loop such as the one shown in Figure \ref{fig:CurrentLoopDiagram}.
 		The associated magnetic moment $\mathbf{\mu}$ of the loop has the magnitude:
@@ -73,68 +74,92 @@
 			\boldsymbol{\tau} = \boldsymbol{\mu} \times \mathbf{B}
 		\end{equation}
 		The resulting potential energy of the current loop in the magnetic field is
-		\begin{equation}
+		\begin{equation} \label{eq:MagneticEnergy}
 			E_{B} = -\boldsymbol{\mu}\cdot \mathbf{B}
 		\end{equation}
 		That is, the magnetic field will do work on the current loop when its orientation is changed in the field.
 		
+		Thus, we can classically model the electron as a loop of current, as shown in Figure \ref{fig:CurrentLoopDiagram}, with magnetic moment given by
+		\begin{equation}
+			\boldsymbol{\mu_l} = -\left(\frac{e}{2m_e}\right) \mathbf{l}
+		\end{equation}
+		where $m_e$ is the mass of the electron, $e$ is the electron charge, and $\mathbf{l}$ is the orbital angular momentum.
+		This is then conventionally stated as
+		\begin{equation} \label{eq:MagneticMoment}
+			\boldsymbol{\mu_l} = -g_l \left( \frac{e\hbar}{2m_e} \right) \left(\frac{\mathbf{l}}{\hbar}\right) = -g_l\mu_B \left(\frac{\mathbf{l}}{\hbar}\right)
+		\end{equation}
+		where $\mu_B$ is the Bohr magneton, and $g_l$ is a unitless ``g factor" which relates the magnitude of the magnetic moment in units of $\mu_B$ to the magnitude of the orbital angular momentum in units of $\hbar$.
+		This ``g factor" will be important later.
 		
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\linewidth]{Images/CurrentLoopDiagram}
-			\caption{A loop of current about a vertical axis with magnetic moment $\mathbf{\mu}$.}
+			\caption{A loop of current about a vertical axis with magnetic moment $\mathbf{\mu}$.\cite{stoltenberg_zeeman_2007}}
 			\label{fig:CurrentLoopDiagram}
 		\end{figure}
-
 		
-		The Bohr Magneton arises from modeling the electron classically as a current loop with current density
-		\begin{equation}
-			\mathbf{J(x)} = -e\mathbf{v} \delta\left(\mathbf{x} - \mathbf{r}\right)
-		\end{equation}
-		Where $\mathbf{r}$ is the orbit equation and $\mathbf{x}$ is the electron position.
+		We use this classical model of the electron as a current loop to begin our theory of the Zeeman effect, but it doesn't get us far.
+		For the purposes of simplicity, we will at first consider an atom with only one valence electron, such as sodium.
+		Later, we will include the effect of multiple valence electrons, such as in mercury.
+		\footnote{As such, we will use lower-case $lsmj$ to denote the quantum numbers of single electrons, while upper-case $LSMJ$ will be used for systems of more than one electron.}
 		
-		This current density results in a magnetic dipole moment given by
-		\begin{equation}
-			\mathbf{u} = \frac{1}{2c}\int \mathbf{x} \times \mathbf{J(x)} d^3x = -\frac{1}{2c}e\left(\mathbf{r \times v}\right)
-		\end{equation}
-		The angular momentum of the orbit is given by
-		\begin{equation}
-			\mathbf{L} = \mathbf{r \times p} = m_e\left(\mathbf{r \times v}\right)
-		\end{equation}
-		
-		The quantized angular momentum of the electron is given by 
-		\begin{equation}
-			\mathbf{L} = \frac{lh}{2\pi}
-		\end{equation}
-		
-		The total angular momentum $j$ of mercury is dependent on both the orbital angular momentum of the valence electrons given by the quantum number $l$, and the spin angular momentum quantum number $s$.
-		In Russell-Saunders or LS coupling, the total angular momentum is given by the sum of the orbital angular momentum and the spin angular momentum:
+		The magnetic torque on an atom is due to the coupled interaction of an electron's total angular momentum, $j$, with the magnetic field.
+		The two forms of angular momentum in electrons - orbital angular momentum, $l$, and intrinsic spin momentum, $s$ - couple to form a measure of total angular momentum, $j$:
 		
 		\begin{equation}
-			j = l + s
-			\label{eq:TotalAngularP}
+		\mathbf{j} = \mathbf{l} + \mathbf{s}
+		\label{eq:TotalAngularP}
 		\end{equation}
+		which has magnitude $\left|\mathbf{j}\right| = \sqrt{j\left(j+1\right)}\hbar$.
 		Figure \ref{fig:TotalAngularMomentumDiagram} shows how these two quantities (vectors, actually) combine to form total angular momentum.
+		
+		The z-component of $j$, $j_z$, is also given by the sum of the z-components of $s$ and $l$
+		\begin{equation}
+			j_z = l_z + s_z = m_j\hbar
+		\end{equation}
+		where $m_j$ is the quantum number quantifying the projection of total angular momentum along the z-axis.
 		
 		\begin{figure}
 			\centering
 			\includegraphics[width=0.7\linewidth]{Images/TotalAngularMomentumDiagram}
-			\caption{Electron spin angular momentum $\mathbf{s}$ and orbital angular momentum $\mathbf{l}$ sum to create total angular momentum $\mathbf{j}$.}
+			\caption{Electron spin angular momentum $\mathbf{s}$ and orbital angular momentum $\mathbf{l}$ sum to create total angular momentum $\mathbf{j}$.\cite{stoltenberg_zeeman_2007}}
 			\label{fig:TotalAngularMomentumDiagram}
 		\end{figure}
 
 		
-		Selection rules place restrictions on how the quantum numbers may change when a valence electron undergoes a transitions.
+		Selection rules place restrictions on how the quantum numbers may change when a valence electron undergoes a transition.
 		These selection rules are:
 		\begin{enumerate}
 			\item $\Delta s = 0$
 			\item $\Delta l = 0, \pm1$
-			\item $\Delta J = 0, \pm1$, but not $\Delta J = 0 \rightarrow \Delta J = 0$
-			\item $\Delta M_j = 0, \pm1$, but not $M_j=0\rightarrow M_j=0$ if $\Delta J = 0$
+			\item $\Delta j = 0, \pm1$, but not $\Delta j = 0 \rightarrow \Delta j = 0$
+			\item $\Delta m_j = 0, \pm1$, but not $m_j=0\rightarrow m_j=0$ if $\Delta j = 0$
 		\end{enumerate}
 		
-		Figure \ref{fig:SpectralSplitting} shows that spectral splitting is dependent on the magnetic quantum number $m$ which specifies the projection of the orbital angular momentum along the z-axis of the atom.
-		$m$ can take on $2l+1$ the values ranging from $l$ to $-l$.
+		From equation (\ref{eq:MagneticEnergy}), the energy change due to a magnetic field is related to the magnetic moment of the electron and the magnitude of the field.
+		Using equation (\ref{eq:MagneticMoment}), we can develop an expression for the quantum-mechanically accurate energy difference of the valence electron in the presence of the magnetic field:
+		\begin{equation}
+			\Delta E = E_B = g_jm_j\mu_BB
+			\label{eq:EnergyShift}
+		\end{equation}
+		
+		The g factor in equation (\ref{eq:EnergyShift}) is known as the Land\'{e} g factor, and is given by
+		\begin{equation}
+		g_L = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
+		\label{eq:LandeGFactor}
+		\end{equation}
+		
+		The Lande\'{e} g factor is derived from considering the projections of the spin and orbital magnetic moments along the total angular momentum j.
+		\cite{stoltenberg_zeeman_2007}
+		
+		When we consider multiple valence electrons, under LS or Russell-Saunders coupling, we can couple together the angular momenta for more than one electron. 
+		The individual orbital and spin angular momenta combine to form total angular momenta, thus $L$ and $S$ combine to form $J$ just as $l$ and $s$ combine to form $j$:
+		\begin{equation}
+			\mathbf{J} = \mathbf{L} + \mathbf{S}
+		\end{equation}
+		
+		Figure \ref{fig:SpectralSplitting} shows that spectral splitting is dependent on the quantum number $m_j$.
+		$m_j$ can take on $2l+1$ the values ranging from $l$ to $-l$.
 		
 		The polarization of the emitted light during the transition is also entirely determined by $\Delta m_j$.
 		For $\Delta m_j = 0$, the emitted photons are polarized linearly and parallel to the field lines of the applied magnetic field $\mathbf{B}$.
@@ -146,7 +171,7 @@
 			\label{fig:MercuryEnergyLevelsDiagram}
 		\end{figure}
 		
-		The energy difference between the hyperfine spectra is caused by the differing values of $\Delta m$ and determined by measuring the relative differences in wavelength between the fine spectra.
+		The energy difference between the hyperfine spectra is caused by the differing values of $\Delta m_j$ and determined by measuring the relative differences in wavelength between the fine spectra.
 		From the basic Planck relation we have
 		\begin{equation}
 			E = h\nu = \frac{hc}{\lambda}
@@ -154,17 +179,11 @@
 		where $h$ is the Planck constant, $\nu$ is wave frequency, and $\lambda$ is wavelength.
 		
 		The relative energy difference of two wavelengths is then given by
-		\begin{equation}
-			\Delta E = -\left(\frac{hc}{\lambda^2}\right) \Delta \lambda
-		\end{equation}
+		
+		
 		
 		\begin{equation}
-			g_L = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}
-			\label{eq:LandeGFactor}
-		\end{equation}
-		
-		\begin{equation}
-			\Delta E = M_z g_L B \mu_B
+			\Delta E = M_j g_L B \mu_B
 			\label{eq:EnergyShift}
 		\end{equation}
 		
@@ -179,16 +198,16 @@
 			To do so, we will measure the magnitude of the hyperfine spectral line splitting in the presence of a magnetic field, and relate this splitting to the magnitude of the Bohr magneton.
 			
 			Consider the 546.1 nm mercury line in the presence of a magnetic field.
-			As described in the previous section, the interaction of the spin-coupled total angular momentum of the valence electrons will interact with the magnetic field to produce hyperfine structure with energy, and thus wavelength, dependent on the value of $\Delta M_z$ in the transition.
+			As described in the previous section, the interaction of the spin-coupled total angular momentum of the valence electron will interact with the magnetic field to produce hyperfine structure with energy, and thus wavelength, dependent on the value of $\Delta M_j$ in the transition.
 			
-			For the case of $M_z = 0 \rightarrow M_z = 0$, the resulting spectral line will be the same as the un-split spectral line in the $B=0$ case with $\lambda = 546.1 nm$.
-			In the $M_z = +1 \rightarrow M_z = +1$ and $M_z = -1 \rightarrow M_z = -1$ cases, however, the resulting hyperfine spectral line will be of slightly greater or less energy than the $B=0$ spectral line, thus resulting in a ``triplet" hyperfine structure in which the central 546.1 nm spectral line is surrounded on either side by two additional hyperfine spectral lines.
+			For the case of $M_j = 0 \rightarrow M_j = 0$, the resulting spectral line will be the same as the un-split spectral line in the $B=0$ case with $\lambda = 546.1 nm$.
+			In the $M_j = +1 \rightarrow M_j = +1$ and $M_j = -1 \rightarrow M_j = -1$ cases, however, the resulting hyperfine spectral line will be of slightly greater or less energy than the $B=0$ spectral line, thus resulting in a ``triplet" hyperfine structure in which the central 546.1 nm spectral line is surrounded on either side by two additional hyperfine spectral lines.
 			
 			We calculate the Land\'{e} g-factor for both the S and P states using equation (\ref{eq:LandeGFactor}).
 			For the $^3S_1$ state, $L=0$ and $S=1$, thus $J = 1$, and $g_S = 2$.
 			For the $^3P_2$ state, $L=1$ and $S=1$, thus $J=2$, and $g_P = 3/2$.
 			
-			Thus, using equation (\ref{eq:EnergyShift}), the energy shifts for the $M_z = \pm1$ cases for the $S$ and $P$ states in the presence of a magnetic field will be:
+			Thus, using equation (\ref{eq:EnergyShift}), the energy shifts for the $M_j = \pm1$ cases for the $S$ and $P$ states in the presence of a magnetic field will be:
 			\begin{equation}
 				\Delta E_S = \pm 2B\mu_B
 			\end{equation}
@@ -196,11 +215,11 @@
 				\Delta E_P = \pm \frac{3}{2}B\mu_B
 			\end{equation}
 			
-			Thus, the photon energy for the $M_z = +1 \rightarrow M_z = +1$ transition will be
+			Thus, the photon energy for the $M_j = +1 \rightarrow M_j = +1$ transition will be
 			\begin{equation}
 				E = h\nu_+ = (E_S + \Delta E_S) - (E_P + \Delta E_P)
 			\end{equation}
-			and for the $M_z = -1 \rightarrow M_z = -1$ it will be
+			and for the $M_j = -1 \rightarrow M_j = -1$ it will be
 			\begin{equation}
 				E = h\nu_- = (E_S - \Delta E_S) - (E_P - \Delta E_P)
 			\end{equation}
@@ -231,6 +250,7 @@
 			Rearranging, we have
 			\begin{equation}
 				\Delta\lambda = \frac{B\mu_B\lambda^2}{hc}
+				\label{eq:WavelengthEq}
 			\end{equation}
 			
 			We now have a relation between the change in wavelength between the outer hyperfine spectra and the Bohr magneton.
@@ -243,21 +263,91 @@
 				
 				\begin{figure}
 					\centering
-					\includegraphics[width=0.7\linewidth]{Images/EtalonDiagram}
-					\caption{Cross-section of the Fabry-Perot etalon. Light entering the etalon undergoes multiple internal reflections before being reflected or transmitted externally. In our notation, the etalon gap distance $l$ is referred to as $d$.\cite{stigmatella_aurantiaca_file:etalon-2.svg_2012}}
-					\label{fig:EtalonDiagram}
+					\includegraphics[width=0.95\linewidth]{Images/EtalonDiagram}
+					\caption{Cross-section of the Fabry-Perot etalon. Light entering the etalon undergoes multiple internal reflections before being reflected or transmitted externally.}
+					\label{fig:Fabry-Perot}
 				\end{figure}
-
+				
+				In the diagram shown in figure \ref{fig:Fabry-Perot}, the difference in path length between light rays 1 and 2 is given by
 				\begin{equation}
-					\frac{d}{f^2}\lambda = \frac{k}{\left(R_k^2 - R_0^2 \right)} = C_0
+					\Delta l = DA + AB - CB 
+				\end{equation}
+				\begin{equation}
+					= \frac{d}{Cos\theta} + \frac{d}{Cos\theta} - 2d(Sin\theta)Tan\theta
+				\end{equation}
+				\begin{equation}
+					= \frac{2d}{Cos\theta} - \frac{2dSin^2\theta}{Cos\theta} =2dCos\theta
+				\end{equation}
+				Where $d$ is the gap distance of the etalon, approximately 1.995 mm.
+				
+				We can expand $Cos\theta$ in a Taylor series and only keep the first two terms because $\theta$ is very small
+				\begin{equation}
+					2dCos\theta = 2d\left(1-\frac{\theta^2}{2}\right)
+				\end{equation}
+				
+				Thus, the total path length difference of the two rays is
+				\begin{equation}
+					\Delta l = 2d\left(1-\frac{\theta^2}{2}\right)
+					\label{eq:EtalonPathLengthDiff}
+				\end{equation}
+				
+				The two rays will be in phase and produce an interference maximum if and only if
+				\begin{equation}
+					\Delta l = (n+k)\lambda, k = 0, 1, 2, 3, ...
+				\end{equation}
+				
+				Thus equation (\ref{eq:EtalonPathLengthDiff}) gives us
+				\begin{equation}
+					2d\left(1-\frac{\theta_k^2}{2}\right) = (n_k)\lambda, k = 0, 1, 2, 3,...
+				\end{equation}
+				where $\theta_k$ is the angle to the $k-th$ interference ring.
+				See figure \ref{fig:B=0Pattern} for an example of the interference pattern seen through the Fabry-Perot etalon.
+				
+				Given a camera focal length f as shown in figre \ref{fig:CameraGeometry}, we can approximate the angle $\theta_k$ to be $\theta_k = R_k/f$, giving us
+				\begin{equation}
+					2d\left(1 - \frac{R_k^2}{2f^2}\right) = (n-k)\lambda, k=1,2,3,...
+					\label{eq:Rk}
+				\end{equation}
+				
+				We can get around not knowing the camera focal length using a measurement of the $B=0$ interference rings.
+				For the $k=0$ ring, we have
+				\begin{equation}
+					2d\left(1-\frac{R_0^2}{2f^2}\right) = n\lambda
+					\label{eq:R0}
+				\end{equation}
+				
+				Subtracting equation (\ref{eq:Rk}) from (\ref{eq:R0}), we arrive at
+				\begin{equation}
+					\frac{d}{f^2}\lambda = \frac{k}{R_k^2 - R_0^2} = C_0
 					\label{eq:ConstantEq}
 				\end{equation}
-				Where $d$ is the gap distance of the Fabry-Perot etalon, approximately 1.995 mm.
-			
-			\begin{equation}
-				\mu_B = \left( \frac{C_0 hc}{2dB} \right) \left( R_{k+}^2 - R_{k-}^2 \right)
-				\label{eq:BohrEquation}
-			\end{equation}
+				
+				Thus by measuring the $R$ values for the interference rings with $B=0$, we can determine $C_0$.
+				
+				\begin{figure}
+					\centering
+					\includegraphics[width=0.95\linewidth]{Images/CameraGeometry}
+					\caption{The camera lens geometry. Figure 4 from \cite{brolight_technology_co._ltd._zeeman_????}}
+					\label{fig:CameraGeometry}
+				\end{figure}
+
+			\subsubsection{Final Derivation of the Bohr Magneton Equation}
+				
+				With equation (\ref{eq:Rk}), we have a general expression relating the interference rings' radial measurements to their wavelengths.
+				Thus, we could measure the inner and outer rings of the hyperfine structure and take the difference to get the difference in wavelength between them.
+				We thus arrive at
+				\begin{equation}
+					\left(\frac{d}{f^2}\right)\left(R_{k+}^2 - R_{k-}^2\right) = (n-k)(\lambda_- - \lambda_+)
+				\end{equation}
+				where $R_{k+}$ is the outer ring radius, $R_{k-}$ is the inner ring radius, $\lambda_+$ is the outer ring's wavelength, and $\lambda_-$ the inner ring's wavelength.
+				
+				Using equation (\ref{eq:WavelengthEq}) and the approximation $(n-k)\lambda = n\lambda = 2d$ and solving for the Bohr magneton, we have
+				\begin{equation}
+					\mu_B = \left( \frac{C_0 hc}{2dB} \right) \left( R_{k+}^2 - R_{k-}^2 \right)
+					\label{eq:BohrEquation}
+				\end{equation}
+				
+				We will use this equation in Section \ref{subsec:BohrCalc} to calculate an experimental value for the Bohr magneton.
 		
 
 		
@@ -266,7 +356,7 @@
 	The experiment consisted of two large solenoids oriented along the same axis with an air gap between them in which a mercury lamp was placed.
 	An optical rail was used to align a polarizing filter, a collimating lens, an interference filter, a Fabry-Perot interferometer, and a CMOS camera.
 	The basic experimental technique consisted of imaging the interference pattern of the 546.1 nm mercury spectral line with the CMOS camera through the polarizer and Fabry-Perot interferometer.
-	Figure 
+	Figures \ref{fig:ContextView} and \ref{fig:SolenoidDetail} show the optics bench setup, including the solenoid electromagnet.
 	
 	\begin{figure*}
 		\centering
@@ -282,7 +372,7 @@
 				\label{subfig:OpticsRail}
 				
 		\end{subfigure}%
-		\caption{\textbf{Overview of the Experiment configuration. Figure \ref{subfig:Overview} shows the entire apparatus with the variable power supply for the solenoid and mercury lamp, the solenoid, the mercury lamp (hidden by the solenoid), the optical track, and the optical instruments. Figure \ref{subfig:OpticsRail} shows the optical instruments in detail.}}
+		\caption{Overview of the Experiment configuration. Figure \ref{subfig:Overview} shows the entire apparatus with the variable power supply for the solenoid and mercury lamp, the solenoid, the mercury lamp (hidden by the solenoid), the optical track, and the optical instruments. Figure \ref{subfig:OpticsRail} shows the optical instruments in detail.}
 		\label{fig:ContextView}
 	\end{figure*}
 	
@@ -298,44 +388,39 @@
 			\caption{}
 			\label{subfig:AxialView}
 		\end{subfigure}%
-		\caption{\textbf{Detail view of the solenoid with the mercury lamp source. Figure \ref{subfig:PerpView} shows the configuration with the magnetic field lines perpendicular to the light source. Figure \ref{subfig:AxialView} shows the axial field configuration looking down the sight-hole of the solenoid to the mercury lamp.}}
+		\caption{Detail view of the solenoid with the mercury lamp source. Figure \ref{subfig:PerpView} shows the configuration with the magnetic field lines perpendicular to the light source. Figure \ref{subfig:AxialView} shows the axial field configuration looking down the sight-hole of the solenoid to the mercury lamp.}
 		\label{fig:SolenoidDetail}
 	\end{figure*}
 	
 	To study the Zeeman effect, observations of a mercury lamp were made first with no magnetic field and $90\deg$ polarization, then with an approximately $1T$ magnetic field.
 	Observations with a magnetic field included:
 	\begin{itemize}
-		\item $90\deg$ (field-perpendicular) polarization
-		\item $0\deg$ (field-parallel) polarization 
 		\item No polarization
-		\item Axial B-field at polarization varying from $90\deg$ to $0\deg$
+		\item Field-parallel polarization
+		\item Field-perpendicular polarization 
+		\item Axial B-field
 	\end{itemize}
 	
 	Figure \ref{fig:FieldConfig} shows the perpendicular and axial configurations of the magnetic field used for the observations.
 	
 	The observations and results of each of these field configurations will be presented and discussed in Section \ref{sec:DataAndResults}.
 	
-	 
-	
-	
 	\begin{figure*}
 		\centering
 		\begin{subfigure}{0.5\textwidth}
 			\includegraphics[width = 1.0\textwidth]{Images/FieldConfigA.jpg}
-			\caption{\textbf{Perpendicular field configuration.}}
+			\caption{Perpendicular field configuration.}
 			\label{subfig:PerpFieldConfig}
 		\end{subfigure}%
 		\begin{subfigure}{0.5\textwidth}
 			\centering
 			\includegraphics[width=1.0\textwidth]{Images/FieldConfigB.jpg}
-			\caption{\textbf{Axial field configuration.}}
+			\caption{Axial field configuration.}
 			\label{subfig:AxialFieldConfig}
 		\end{subfigure}%
-		\caption{\textbf{The two magnetic field configurations observed. In (\ref{subfig:PerpFieldConfig}), the magnetic field is oriented perpendicularly to the path of the observed light from the mercury lamp. $\mathbf{90\degree}$ polarization is defined to be perpendicular to the field lines, while $\mathbf{0\degree}$ polarization is parallel to the field lines. In configuration (\ref{subfig:AxialFieldConfig}), light from the lamp travels along the magnetic field lines down the center of one of the solenoids through a sight hole.}}
+		\caption{The two magnetic field configurations observed. In (\ref{subfig:PerpFieldConfig}), the magnetic field is oriented perpendicularly to the path of the observed light from the mercury lamp. $90\degree$ polarization is defined to be perpendicular to the field lines, while $0\degree$ polarization is parallel to the field lines. In configuration (\ref{subfig:AxialFieldConfig}), light from the lamp travels along the magnetic field lines down the center of one of the solenoids through a sight hole.}
 		\label{fig:FieldConfig}
 	\end{figure*}
-	
-	\subsection{Method Description} \label{subsec:MethodDescription}
 	
 \section{Data and Results} \label{sec:DataAndResults}
 	 
@@ -352,45 +437,32 @@
 	 Table \ref{tab:B0Data} shows the measured radii of the interference rings for the $k=1$ through $k=4$ rings.
 	 The $k=0$ ring was not used in subsequent observations and calculations because it was not resolved enough to be measurable.
 	 
-	 \begin{table}[h]
-	 	\centering
-	 	\begin{tabular}{l|l}
-	 		k & Radius (m) \\ \hline
-	 		4 & 0.7956 $\pm$ $0.1\times10^{-3}$    \\
-	 		3 & 0.6911 $\pm$ $0.2\times10^{-3}$    \\
-	 		2 & 0.5678 $\pm$ $0.1\times10^{-3}$    \\
-	 		1 & 0.4096 $\pm$ $0.1\times10^{-3}$   
-	 	\end{tabular}
-	 	\caption{\textbf{Interference ring radii of the mercury 546.1 nm spectra with no magnetic field.}}
-	 	\label{tab:B0Data}
-	 \end{table}
-	 
 	 The ``bullseye'' $B=0$ pattern will be the standard interference pattern we will compare all subsequent patterns on.
 	 
 	\subsection{Observations perpendicular to the Magnetic Field}
 		The first observations were made such that the mercury lamp was viewed perpendicularly to the magnetic field, as is shown in Figure \ref{subfig:PerpFieldConfig}.
 		
 		When viewed without a polarizer, the interference pattern appears as in Figure \ref{fig:Run2_NoPolarizer_detail}.
-		All nine of the transition spectra, corresponding to all 9 possible $\Delta M_z$ transition values, can be seen.
+		All nine of the transition spectra, corresponding to all nine possible unique $\Delta M_j$ transition values, can be seen.
 		
 		\begin{figure*}
 			\centering
 			\includegraphics[width=0.6\linewidth]{Images/Run2_NoPolarizer_detail}
-			\caption{Mercury spectra in the presence of a magnetic field viewed without a polarizer. All spectra from all nine possible $\Delta M_z$ transitions can be seen.}
+			\caption{Mercury spectra in the presence of a magnetic field viewed without a polarizer. All spectra from all nine unique $\Delta M_j$ transitions can be seen.}
 			\label{fig:Run2_NoPolarizer_detail}
 		\end{figure*}
 
-		From the theory discussed in section \ref{sec:Theory}, different values of $\Delta M_z$ in the mercury transition will produce different polarizations of the emitted light.
-		Thus, we can use polarization to identify particular hyperfine lines which correspond to certain values of $\Delta M_z$.
+		From the theory discussed in section \ref{sec:Theory}, different values of $\Delta M_j$ in the mercury transition will produce different polarizations of the emitted light.
+		Thus, we can use polarization to identify particular hyperfine lines which correspond to certain values of $\Delta M_j$.
 		
-		\subsubsection{$\mathbf{\Delta M_z = 0}$ Transition spectra}
+		\subsubsection{$\mathbf{\Delta M_j = 0}$ Transition spectra}
 			With a $1T$ magnetic field and the polarizer set parallel to the field lines, we observed the mercury spectra with polarization parallel to the applied magnetic field. A distinct triple ring structure can be seen Figure \ref{fig:Triplet90deg} in which each interference ring consists of a bright central ring surrounded by two fainter rings. 
 			This is what has been historically termed the ``Normal" Zeeman effect.
 			
 			\begin{figure*}
 				\centering
 				\includegraphics[width=0.6\linewidth]{Images/Run1_ParallelPolarizer}
-				\caption{The ``Normal" Zeeman effect. Mercury interference pattern viewed perpendicular to the magnetic field lines through a polarizer oriented parallel to the field. The interference rings correspond to photons produced by $\Delta M_z = 0$ transitions polarized parallel to the magnetic field lines.}
+				\caption{The ``Normal" Zeeman effect. Mercury interference pattern viewed perpendicular to the magnetic field lines through a polarizer oriented parallel to the field. The interference rings correspond to photons produced by $\Delta M_j = 0$ transitions polarized parallel to the magnetic field lines.}
 				\label{fig:Triplet90deg}
 			\end{figure*}
 			
@@ -426,35 +498,58 @@
 				\end{tabular}
 				
 				
-				\caption{\textbf{Radius measurements of the hyperfine structure of the k=1 through k=4 interference rings with a 1T magnetic field and $\mathbf{90\degree}$ polarization.}}
+				\caption{Radius measurements of the hyperfine structure of the k=1 through k=4 interference rings with a 1T magnetic field and $\mathbf{90\degree}$ polarization.}
 				\label{tab:RadiusMeasurements}
 			\end{table*}
 			
-		\subsubsection{$\mathbf{\Delta M_z = \pm1}$ Transition Spectra}
+		\subsubsection{$\mathbf{\Delta M_j = \pm1}$ Transition Spectra}
+			By orienting the polarizer perpendicular to the magnetic field lines, we were able to observe the spectra due to the circularly-polarized $\Delta M_j = \pm1$ transitions.
+			The result is shown in figure \ref{fig:Run2_0Deg}, in which it can be seen that each interference ring is now missing the $\Delta M_j=0$ rings which have been filtered by the polarizer, while the outer rings due to the $\Delta M_j = \pm1$ transitions are visible.
+			
 		\begin{figure*}
 			\centering
 			\includegraphics[width=0.55\linewidth]{Images/Run2_PerpendicularPolarizer}
-			\caption{Interference pattern viewed through a polarizer oriented perpendicular to the magnetic field lines. The $\Delta M_z = 0$ transition spectra polarized parallel to the magnetic field cannot be seen, leaving a large gap between the circularly-polarized $\Delta M_z = \pm1$ transition spectra.}
+			\caption{Interference pattern viewed through a polarizer oriented perpendicular to the magnetic field lines. The $\Delta M_j = 0$ transition spectra polarized parallel to the magnetic field cannot be seen, leaving a large gap between the circularly-polarized $\Delta M_j = \pm1$ transition spectra.}
 			\label{fig:Run2_0Deg}
 		\end{figure*}
 
 		
 	\subsection{Spectra Along an Axial Magnetic Field}
+		Our next observation was axial with the magnetic field, as shown in figures \ref{subfig:AxialFieldConfig} and \ref{subfig:AxialView}.
+		The result is shown in figure \ref{fig:Run3_AxialField}.
+		Regardless of whether a polarizer was used or not, and indeed regardless of the orientation of the polarizer, the pattern did not change.
+		This agrees with the theory, as the linearly-polarized $\Delta M_j = 0$ transitions cannot propagate axially, as their field vectors $\mathbf{E}$ and $\mathbf{B}$ must be mutually perpendicular with their propagation direction.
+		
+		The circularly-polarized $\Delta M_j = \pm1$ transitions can be seen, however, as they are polarized circularly about the magnetic field lines.
+		
 		\begin{figure*}
 			\centering
 			\includegraphics[width=0.55\linewidth]{Images/Run3_AxialField}
-			\caption{Interference pattern viewed axially along the magnetic field through the sight-hole in the electromagnet as shown in Figure \ref{subfig:AxialFieldConfig}. Only the circularly-polarized $\Delta M_z = \pm1$ transition spectra can be seen since photons from the $\Delta M_z = 0$ transition spectra cannot propagate in this direction because their $\mathbf{E}$ and $\mathbf{B}$ field vectors must be perpendicular to their propagation direction.}
+			\caption{Interference pattern viewed axially along the magnetic field through the sight-hole in the electromagnet as shown in Figure \ref{subfig:AxialFieldConfig}. Only the circularly-polarized $\Delta M_j = \pm1$ transition spectra can be seen since photons from the $\Delta M_j = 0$ transition spectra cannot propagate in this direction because their $\mathbf{E}$ and $\mathbf{B}$ field vectors must be perpendicular to their propagation direction.}
 			\label{fig:Run3_AxialField}
 		\end{figure*}
 
 	\subsection{Measurement of the Bohr Magneton} \label{subsec:BohrMagneton}
-		Using the measurements of the split interference rings from the $B\neq 0$ case we were able to establish a value for the Bohr magneton.
+		Using the measurements of the split interference rings from the observation of the ``Normal" Zeeman effect with the $\Delta M_j = 0$ transition spectra, we were able to establish a value for the Bohr magneton.
 		The inner and outer radius of each interference triplet was measured using PASCO software and is tabulated in Table \ref{tab:RadiusMeasurements}.
 		
 		To calculate the magnitude of the Bohr magneton, we use the theory from Section \ref{subsec:BohrCalc}.
 		First, we must calculate the constant $C_0$ in equation (\ref{eq:ConstantEq}).
 		This is accomplished using the un-split interference ring radii from the $B=0$ case.
 		These measurements are given in Table \ref{tab:B0Data}.
+		
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{l|l}
+				k & Radius (m) \\ \hline
+				4 & 0.7956 $\pm$ $0.1\times10^{-3}$    \\
+				3 & 0.6911 $\pm$ $0.2\times10^{-3}$    \\
+				2 & 0.5678 $\pm$ $0.1\times10^{-3}$    \\
+				1 & 0.4096 $\pm$ $0.1\times10^{-3}$   
+			\end{tabular}
+			\caption{Interference ring radii of the mercury 546.1 nm spectra with no magnetic field.}
+			\label{tab:B0Data}
+		\end{table}
 		
 		Using equation (\ref{eq:ConstantEq}), the value of $C_0$ for each interference ring $k=1$ through $k=4$ was calculated.
 		The average of these values was then taken as the best value for $C_0$.
@@ -475,22 +570,22 @@
 		\end{table}
 		
 		With a precise measured value for $C_0$, values for the Bohr magneton can then be calculated with equation (\ref{eq:BohrEquation}).
-		The difference between inner and outer radii for each interference ring in the $B\neq 0$, parallel-field polarization case, which is related to the magnitude of the change in wavelength between the $\delta M_z = \pm1$ transitions, is used to calculate the Bohr magneton.
+		The difference between inner and outer radii for each interference ring in the $B\neq 0$, parallel-field polarization case, which is related to the magnitude of the change in wavelength between the $\Delta M_j = \pm1$ transitions, is used to calculate the Bohr magneton.
 		These values for $R_{k+}$ and $R_{k-}$ are given in Table \ref{tab:RadiusMeasurements}.
 		
-		The remaining constants in equation (\ref{eq:BohrEquation}) are Planck's constant, $h = 6.63\times10^{-34}$, the speed of light, $c = 2.99\times10^8 m/s$, the gap distance of the Fabry-Perot etalon, $d = 1.995\times10^{-3} m$, and the magnitude of the magnetic field at $10 A$, $B = 1.105 T$.
+		The remaining constants in equation (\ref{eq:BohrEquation}) are Planck's constant, $h = 6.63\times10^{-34}$, the speed of light, $c = 2.99\times10^8 m/s$, the gap distance of the Fabry-Perot etalon, $d = 1.995\times10^{-3} m$, and the magnitude of the magnetic field at $5 A$, $B = 1.105 T$.
 		
 		The calculated values for the Bohr magneton for each interference ring as well as the mean and standard deviation are given in Table \ref{tab:BohrCalcs}.
 		
 		\begin{table}[]
 			\centering
 			\begin{tabular}{l|l}
-				$\mathbf{k}$    & $\mathbf{\boldsymbol{\mu}_B \ (J\cdot T^{-1})}$ \\ \hline
-				\textbf{1}    & $9.16\times10^{-24}$   \\
-				\textbf{2}    & $9.24\times10^{-24}$   \\
-				\textbf{3}    & $9.36\times10^{-24}$   \\
-				\textbf{4}    & $9.10\times10^{-24}$   \\ \hline
-				\textbf{Mean} & $9.22\times10^{-24}\pm0.06\times10^{-24}$  
+				$k$  & $\mu_B \ (J\cdot T^{-1})$ \\ \hline
+				1    & $9.16\times10^{-24}$   \\
+				2    & $9.24\times10^{-24}$   \\
+				3    & $9.36\times10^{-24}$   \\
+				4    & $9.10\times10^{-24}$   \\ \hline
+				Mean & $9.22\times10^{-24}\pm0.06\times10^{-24}$  
 			\end{tabular}
 			\caption{Calculated values of the Bohr magneton $\mu_B$ for each interference ring, and the mean calculated value for all interference rings.}
 			\label{tab:BohrCalcs}
@@ -507,11 +602,11 @@
 
 \section{Conclusion} \label{sec:Conclusion}
 	We observed the Zeeman  effect and verified its effect on the 546.1 nm mercury spectral line in the presence of a $\approx1T$ magnetic field.
-	We verified that the hyperfine structure was produced by transitions of various changes of the quantum number $\Delta M_z$ which are constrained by the quantum selection rules.
+	We verified that the hyperfine structure was produced by transitions of various changes of the quantum number $\Delta M_j$ which are constrained by the quantum selection rules.
 	Using a polarizer, we showed that the different hyperfine spectra have either parallel or circular polarization along the magnetic field lines.
-	We were able to separately observe light polarized parallel to the magnetic field lines created in $\Delta M_z = 0$ transitions, as well as axially circular-polarized light created in $\Delta M_z = \pm1$ transitions.
+	We were able to separately observe light polarized parallel to the magnetic field lines created in $\Delta M_j = 0$ transitions, as well as axially circular-polarized light created in $\Delta M_j = \pm1$ transitions.
 	Finally, we arrived at a measured value for the Bohr magneton of $\mu_B = 9.22\times10^{-24}\pm 0.06\times10^{-24} J\cdot T^{-1}$, which is within 0.63\% of the accepted SI value.
-\bibliographystyle{plain}
+\bibliographystyle{ieeetr}
 \bibliography{ZeemanPaper}
 
 \end{document}

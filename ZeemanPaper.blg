@@ -1,48 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ZeemanPaper.aux
-The style file: plain.bst
+The style file: ieeetr.bst
 Database file #1: ZeemanPaper.bib
-Warning--to sort, need author or key in _codata_????
-You've used 3 entries,
-            2118 wiz_defined-function locations,
-            509 strings with 4261 characters,
-and the built_in function-call counts, 591 in all, are:
-= -- 50
-> -- 15
+You've used 4 entries,
+            1876 wiz_defined-function locations,
+            491 strings with 3851 characters,
+and the built_in function-call counts, 530 in all, are:
+= -- 40
+> -- 20
 < -- 0
-+ -- 7
-- -- 4
++ -- 9
+- -- 5
 * -- 23
-:= -- 95
-add.period$ -- 7
-call.type$ -- 3
-change.case$ -- 10
+:= -- 77
+add.period$ -- 3
+call.type$ -- 4
+change.case$ -- 3
 chr.to.int$ -- 0
 cite$ -- 4
-duplicate$ -- 26
-empty$ -- 68
-format.name$ -- 4
-if$ -- 129
+duplicate$ -- 21
+empty$ -- 75
+format.name$ -- 5
+if$ -- 132
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 4
 missing$ -- 2
 newline$ -- 16
-num.names$ -- 4
-pop$ -- 25
+num.names$ -- 3
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 8
+purify$ -- 0
 quote$ -- 0
-skip$ -- 23
+skip$ -- 21
 stack$ -- 0
-substring$ -- 15
-swap$ -- 3
+substring$ -- 0
+swap$ -- 1
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 10
-warning$ -- 1
-while$ -- 4
-width$ -- 4
-write$ -- 27
-(There was 1 warning)
+type$ -- 0
+warning$ -- 0
+while$ -- 3
+width$ -- 5
+write$ -- 29
